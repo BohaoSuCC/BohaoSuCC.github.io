@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Position</title>
+    <style>
+        .class1{
+            background-color: aqua;
+            height: 400px;
+        }
+        .class2{
+            background-color: yellowgreen;
+            height: 400px;
+            margin-bottom: 50px;
+        }
+        .box1{
+            background-color: orangered;
+            width: 100px;
+            height: 100px;
+        }
+        .box2{
+            background-color: orangered;
+            width: 100px;
+            height: 100px;
+            
+        }
+        .relativebox{
+            width: 100px;
+            height: 100px;
+            background-color: blueviolet;
+            position: relative;
+            top:40px;
+            left: 50px;
+        }
+        .absolutebox{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            position: absolute;
+            left: 120px;
+        }
+        .fixed-box{
+            width: 100px;
+            height: 100px;
+            background-color: gray;
+            position: fixed;
+            top: 600px;
+            right: 5px;
+            opacity: 0.5;
+            border: 5px solid red;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="relativepos">Relative Position</h1>
+    <div class="class1">
+        <div class="box1"></div>
+        <div class="relativebox"></div>
+        <div class="box1"></div>
+    </div>
+
+    <h1 class="absolutepos">Absolute Position</h1>
+
+    <div class="class2">
+        <div class="box2"></div>
+        <div class="absolutebox"></div>
+        <div class="box2"></div>
+    </div>
+
+    <h1 class="fixedpos">Fixed Position</h1>
+
+    <div class="fixed-box"></div>
+
+</body>
+</html>

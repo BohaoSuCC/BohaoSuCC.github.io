@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .demo {
+        background-color: aqua;
+        display: inline-block;
+        padding: 30px;
+        border: 5px 5px 8px 4px;
+        border-color: orangered;
+        border-style: solid;
+        margin: 40px 100px 50px;
+        width: 200px;
+        height: 200px;
+        }
+        .fatherfloat {
+            background-color: aqua;
+            width: 800px;
+            border: 3px solid black;
+            height: 1600px;
+            overflow: hidden;
+        }
+        .leftsonfloat {
+            background-color: blueviolet;
+            width: 200px;
+            height: 200px;
+            float: left;
+        }
+        .rightsonfloat {
+            background-color: brown;
+            width: 200px;
+            height: 200px;
+            float: left;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="demo">
+        this is a demo for box model.
+    </div>
+    <div class="fatherfloat">
+        <div class="leftsonfloat">
+            this is a leftson floating
+        </div>
+        <div class="rightsonfloat">
+            this ia s rightson floating
+        </div>
+    </div>
+</body>
+</html>
