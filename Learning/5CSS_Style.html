@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        h2{
+            color: aquamarine;
+        }
+        .classsele{
+            color: blueviolet;
+        }
+        #uniqueone{
+            color: rebeccapurple;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: larger;
+        }
+        *{
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .father>.child{
+            color: red;
+        }
+        .father>.achildcousin{
+            color: green;
+        }
+        .father .achildcousin{
+            color: blueviolet;
+        }
+        h4+p{
+            color: blue;
+        }
+        /* Pseudo-class Selector could have other options like 
+        :first-child
+        :nth-child()
+        :nth-last-child() etc.
+        */
+        #interactelement:hover{
+            color: red;
+            font-size: larger;
+            background-color: cadetblue;
+        }
+
+        /* Pseudo-element Selector like ::after or ::before  */
+    </style>
+</head>
+<body>
+    <h1>This is a CSS selector</h1>
+    <h2>This is a CSS element selector</h2>
+    <h1>This is a CSS selector</h1>
+    <h3 class="classsele">This is a class selector</h3>
+    <h4 class="idsele" id="uniqueone">this is a id selector</h4>
+    <div class="father">this is a father element
+        
+        <div class="child">this is a child element
+            <div class="grandchild">this is a grandchild element</div>
+        </div>
+
+        <div class="achildcousin">
+            this is a child cousin element
+            <div class="grandchildcousin">this is a grandchild cousin element
+                <div class="grangrangranchil">this is a heir element</div>
+            </div>
+        </div>
+
+    </div>
+
+    <p>this is a normal p label</p>
+    <h4>this ia a neighbor brother selector</h4>
+    <p>this is a normal p label</p>
+
+    <p style="line-height: 40px;width: 200px;">this is a long long long long long long 
+        long long long long long long long long long long long long long 
+        long long long long long long long long long text</p>
+
+    <div id="interactelement">This is a Pseudo-class Selector</div>
+</body>
+</html>
