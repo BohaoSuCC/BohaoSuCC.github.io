@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Layout</title>
+    <style>
+        html{
+            font-size: 10px;
+        }
+        .container{
+            display: flex;
+            background-color: aqua;
+            flex-direction: row;
+            flex-wrap: wrap;
+            /* justify-content: space-evenly; */
+            /* align-items: flex-start; */
+            align-content: space-evenly;
+        }
+        .item{
+            width: 20rem;
+            font-size: 8rem;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="container">
+        <div class="item" style="background-color: blue;">1</div>
+        <div class="item" style="background-color: rgb(238, 152, 53);">2</div>
+        <div class="item" style="background-color: rgb(98, 226, 38);">3</div>
+        <div class="item" style="background-color: rgb(21, 192, 235);">4</div>
+        <div class="item" style="background-color: rgb(220, 24, 238);">5</div>
+        <div class="item" style="background-color: rgb(235, 37, 86);">6</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <button onclick="clickEvent()">this is an event </button>
+    <input type="text" onfocus="focus_event()" onblur="blur_event()">
+    <div></div>
+    <script>
+        function clickEvent(){
+            alert("this event has been triggered");
+        }
+        // focus event
+        function focus_event(){
+            console.log("get the focus")
+        }
+        // blur event
+        function blur_event(){
+            console.log("lost the focus")
+        }
+    </script>
+    
+    <div id="box1">this is a id selector label</div>
+    <div class="box2">this is a class selector label</div>
+    <div>this is a normal div label</div>
+    <script>
+        var idEvelment = document.getElementById("box1");
+        console.log(idEvelment);
+        var class_Element = document.getElementsByClassName("box2")[0];
+        console.log(class_Element);
+        var tag_Element = document.getElementsByTagName("div")[3];
+        console.log(tag_Element);
+        // change the innerhtml of the element
+        idEvelment.innerHTML = '<a href="#">this is a link</a>';
+        class_Element.innerText = '<a href="#">this is a link</a>';
+
+        tag_Element.style.color = "white";
+        tag_Element.style.backgroundColor = "red";
+        button_element = document.getElementsByTagName("button")[0];
+        button_element.onclick=function(){
+            alert('DOM feature event triggered');
+        }
+    </script>
+
+</body>
+</html>

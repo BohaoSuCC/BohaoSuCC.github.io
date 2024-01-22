@@ -1,5 +1,9 @@
 body {
     font-family: Arial, sans-serif;
+    background-image: linear-gradient(to right, #a599e4, #7bc5ec);
+    opacity: 0.5;
+    display: flex;
+    justify-content: center;
 }
 
 header {

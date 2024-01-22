@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modify Tables</title>
+    <style>
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td{
+            border: 1px solid #ddd;
+            text-align: center;
+            padding: 10px;
+            
+        }
+        th{
+            background-color: #2cabdd;
+            color: white;
+        }
+        button{
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;"> Modifying Tables</h1>
+    <button onclick="addRow()">New Data</button>
+    <table id="table_basic">
+        <tr>
+            <th>NAME</th>
+            <th>AGE</th>
+            <th>NATIONALITY</th>
+            <th>BUTTON</th>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>20</td>
+            <td>USA</td>
+            <td>
+                <button class="Button_Edit" onclick="editRow(this)">EDIT</button><button class="Button_Edit" onclick="deleteRow(this)">DELETE</button>
+            </td>
+        </tr>
+    </table>
+    <script>
+        // create a new row data
+        function addRow(){
+            var table = document.getElementById("table_basic");
+            // console.log(table);
+            // get the length of table
+            var length = table.rows.length;
+            // console.log(length)
+            // create a new row
+            var newRow = table.insertRow(length);
+            // console.log(newRow)
+            newRow.innerHTML = '<td></td><td></td><td></td><td><button class="Button_Edit" onclick="editRow(this)">EDIT</button><button class="Button_delete" onclick="deleteRow(this)">DELETE</button></td>';
+        }
+        function deleteRow(button){
+            var currentrow=button.parentNode.parentNode;
+            currentrow.parentNode.removeChild(currentrow);
+        }
+        function editRow(button){
+            var currentrow=button.parentNode.parentNode;
+            var name=currentrow.cells[0];
+            var age=currentrow.cells[1];
+            var nationality=currentrow.cells[2];
+
+            var inputname = prompt("please enter the name: ");
+            var inputage = prompt("please enter the age: ");
+            var inputnation = prompt("please enter your nationality: ");
+
+            name.innerHTML = inputname;
+            age.innerHTML = inputage;
+            nationality.innerHTML = inputnation;
+
+        }
+    </script>
+
+</body>
+</html>
