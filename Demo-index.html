@@ -10,42 +10,55 @@
 
     <style>
         body {
-    font-family: Arial, sans-serif;
-    /* background-image: linear-gradient(to right, #8272d1, #69accf, #8272d1); */
-    background-color: rgb(33, 31, 46);
-    opacity: 1;
-    justify-content: center;
-    align-items: center;
-    }
+            font-family: Arial, sans-serif;
+            /* background-image: linear-gradient(to right, #8272d1, #69accf, #8272d1); */
+            background-color: rgb(33, 31, 46);
+            opacity: 1;
+            justify-content: center;
+            align-items: center;
+        }
         .row{
-    background-color: rgba(35, 181, 175, 0.5);
-    color: #FFFFFF;
-    border:#5f5353 1px solid;
-    margin: 15px, 0;
-    padding:15px, 0;
-    justify-content: center;
-    align-items: center;
+            background-color: rgba(35, 181, 175, 0.5);
+            color: #FFFFFF;
+            border:#5f5353 1px solid;
+            margin: 15px, 0;
+            padding:15px, 0;
+            justify-content: center;
+            align-items: center;
         }
         .container{
             margin:20px auto;
         }
+        .col-sm{
+
+            text-align: center;
+        }
+        #NavigationBar *{
+            background-color: rgba(35, 181, 175, 0.5);
+            color: #FFFFFF;
+            border:#5f5353 1px solid;
+            margin: 15px, 10px;
+            padding:15px, 20px;
+            justify-content: center;
+            align-items: center;
+        }
         #hexGrid {
-    display: flex;
-    flex-wrap: wrap;
-    width: 90%;
-    margin: 0 auto;
-    }
+            display: flex;
+            flex-wrap: wrap;
+            width: 40%;
+            margin: 0 auto;
+        }
         .hex {
-    position: relative;
-    width: 150px;
-    height: 173.205px;
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    background-color: #ddd; /* 六边形的颜色 */
-    margin: 0 1px 29px 1px;
-    }
+            position: relative;
+            width: 150px;
+            height: 173.205px;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            background-color: #ddd; /* 六边形的颜色 */
+            margin: 0 1px 29px 1px;
+        }
         .hex:nth-child(odd) {
-    margin-left: 0px; /* 为了错开排列 */
-    }
+            margin-left: 0px; /* 为了错开排列 */
+        }
     </style>
 </head>
 
@@ -53,7 +66,7 @@
 <body>
 
     <div class="container" id="header">
-        <div class="row">
+        <div class="row" id="NavigationBar">
             <div class="col-sm" id="Home">Home</div>
             <div class="col-sm">Second row</div>
             <div class="col-sm">Third row</div>
