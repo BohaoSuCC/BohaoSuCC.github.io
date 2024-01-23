@@ -3,18 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>HOMEPAGE</title>
     <style>
         body {
     font-family: Arial, sans-serif;
-    background-image: linear-gradient(to right, #a599e4, #7bc5ec);
-    opacity: 0.5;
+    background-image: linear-gradient(to right, #8272d1, #69accf, #8272d1);
+    opacity: 1;
     display: flex;
     justify-content: center;
-}
+    }
+        #hexGrid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+    }
+        .hex {
+    position: relative;
+    width: 100px;
+    height: 115.47px;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    background-color: #ddd; /* 六边形的颜色 */
+    margin: 0 1px 29px 1px;
+    }
+        .hex:nth-child(odd) {
+    margin-left: 0px; /* 为了错开排列 */
+    }
     </style>
 </head>
 <body>
-    
+    <div id="header">
+        <h1>WELCOME TO MY HOMEPAGE</h1>
+    </div>
+    <div id="hexGrid"></div>
+
+
+
+
+
+
+    <script>
+        const hexGrid = document.getElementById('hexGrid');
+        const hexCount = 10; // 你想要的六边形数量
+
+        for (let i = 0; i < hexCount; i++) {
+            const hex = document.createElement('div');
+            hex.className = 'hex';
+            hexGrid.appendChild(hex);
+            }
+    </script>
 </body>
 </html>
