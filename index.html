@@ -1,56 +1,158 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOMEPAGE</title>
-    <style>
-        body {
-    font-family: Arial, sans-serif;
-    background-image: linear-gradient(to right, #8272d1, #69accf, #8272d1);
-    opacity: 1;
-    display: flex;
-    justify-content: center;
-    }
-        #hexGrid {
-    display: flex;
-    flex-wrap: wrap;
-    width: 90%;
-    margin: 0 auto;
-    }
-        .hex {
-    position: relative;
-    width: 100px;
-    height: 115.47px;
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    background-color: #ddd; /* 六边形的颜色 */
-    margin: 0 1px 29px 1px;
-    }
-        .hex:nth-child(odd) {
-    margin-left: 0px; /* 为了错开排列 */
-    }
-    </style>
-</head>
-<body>
-    <div id="header">
-        <h1>WELCOME TO MY HOMEPAGE</h1>
-    </div>
-    <div id="hexGrid"></div>
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>苏博昊 Bohao Su</title>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-154866877-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
 
+		  gtag('config', 'UA-154866877-1');
+		</script>
+		<meta name="google-site-verification" content="MHZJKKeQb1PsIO4HUsO38ZGAqV5AxGwDtdkqFyu3t6Q" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="icon" href="images/favicon.ico">
+	</head>
 
+	<body class="is-preload">
 
+		<header id="nav-bar">
+			<h1><a href="index.html">Ollie Ballinger</a></h1>
+			<nav class="links">
+				<ul>
+					<li><a href="https://www.ucl.ac.uk/bartlett/casa/people/ollie-ballinger">UCL Page</a></li>
+					<li><a href="https://scholar.google.co.uk/citations?user=Qwt1nhoAAAAJ&hl=en&oi=ao">Publications</a></li>
+					<li><a href="#">Teaching</a></li>
+					<a href="https://twitter.com/oballinger"><img src="images/socials/twitter.png" id='socials'></a>
+					<a href="https://github.com/oballinger"><img src="images/socials/github.png" id='socials'></a>
+					<a href="mailto:o.ballinger@ucl.ac.uk"><img src="images/socials/email.png" id='socials'></a>
+				</ul>
+			<img src="images/socials/twitter.png" id='socials'>
+			hello world
 
+			</nav>
+		</header>
+		<div id='profile-box'>
+			<div class='frame'>
+				<img src="images/headshot_bw.jpg" class='headshot'>
+			</div>
+			<div class='profile-text'>
+				<h1>Hello!</h1>
+				My name is Ollie Ballinger. I'm a Lecturer in Geocomputation at the Centre for Advanced Spatial Analysis at University College London. I did my PhD at the Oxford Department for International Development, where my research focused on developing computational methods for the study of insurgent recruitment in Turkey. I sometimes build and write things for Bellingcat, where I am a Tech Fellow. I'm a big fan of satellites and strange datasets. Here are some of the projects i've worked on over the years.
+			</div>
+		</div>
+		<!-- Wrapper -->
+			<div id="wrapper">	
 
+				<!-- Main -->
+					<div id="main">
+						<article class="thumb">
+							<a href="" class="image"><img src="images/thumbs/sts_short.gif" alt="" /></a>
+							<h2>Ship-to-Ship Transfer Detection</h2>
+							<p> Ship-to-Ship transfers involve two or more large cargo vessels meeting at sea and swapping cargo. This is often used to conseal the origin of cargo, and has been used extensively by Russian vessels to launder stolen Ukrainian grain. I train a neural network to automatically detect these transfers in satellite imagery.</p>
+						</article>
+						<article class="thumb">
+							<a href="https://www.bellingcat.com/news/2023/05/11/grain-trail-tracking-russias-ghost-ships-with-satellite-imagery/" class="image"><img src="images/thumbs/sevastopol_mosaic.jpg" alt="" /></a>
+							<h2>Tracking Russia's Ghost Ships with Satellite Imagery</h2>
+							<p></p>
+						</article>
+						<article class="thumb">
+							<a href="" class="image"><img src="images/thumbs/pools.png" alt="" /></a>
+							<h2>Identifying Unregulated Rare Earth Mines in Myanmar</h2>
+							<p>I was the Principal Investigator for a joint project between the Alan Turing Institute and Global Witness, in which multiple computer vision algorithms were trained to identify illegal rare earth mining in rebel-held areas the Myanmar-China border. 
+							</p>
+						</article>
+						<article class="thumb">
+							<a href="https://www.bellingcat.com/resources/2022/02/11/radar-interference-tracker-a-new-open-source-tool-to-locate-active-military-radar-systems/" class="image"><img src="images/thumbs/RIT.jpg" alt="" /></a>
+							<h2>Radar Interference Tracker</h2>
+							<p>Many missile defense radars interfere with open source satellite imagery when they're turned on. I built a tool for Bellingcat that lets anyone monitor when and where these radars are deployed. The tool has since been featured in the Economist, Sky News, Hackaday, and beyond.</p>
+						</article>
+						<article class="thumb">
+							<a href="https://www.bellingcat.com/resources/2021/04/15/what-oil-satellite-technology-and-iraq-can-tell-us-about-pollution/" class="image"><img src="images/thumbs/mishraq.gif" alt="" /></a>
+							<h2>Conflict and Pollution in Iraq</h2>
+							<p>I co-wrote an article for Bellingcat which investigates conflict-related pollution in Iraq. I use remote sensing, machine learning, and geolocation to trace pollution back to facilities operated by multinational oil companies and map out the impacts on nearby communities.</p>
+						</article>
+						<article class="thumb">
+							<a href="https://ollielballinger.users.earthengine.app/view/ukraine-damage-assessment" class="image"><img src="images/thumbs/ukraine.jpg" alt="" /></a>
+							<h2>Ukraine Damage Assessment Tool</h2>
+							<p>This tool deploys a new methodology I developed to detect building damage in Synthetic Aperture Radar imagery. It allows users to get the number and distribution of destroyed buildings in a given area, uses georeferenced footage from social media for ground-truthing.</p>
+						</article>
+						<article class="thumb">
+							<a href="https://oballinger.github.io/beirut-3D-model/" class="image"><img src="images/thumbs/beirut.gif" alt="" /></a>
+							<h2>3D Model of the Beirut Explosion</h2>
+							<p>Following the 2020 Beirut explosion, blast damage assessment was carried out using two-dimensional satellite imagery which fails to capture damage done to the sides of buildings. I develop an alternative approach using Open Street Map data to create a 3D model of Beirut and the explosion to analyze directional blast damage.</p>
+						</article>
+						<article class="thumb">
+							<a href="https://ollielballinger.users.earthengine.app/view/ism" class="image"><img src="images/thumbs/ISM.jpg" alt="" /></a>
+							<h2>Informal Settlement Mapping</h2>
+							<p>I built a prototype application for the U.N. World Food Programme that identifies informal settlements using a Random Forest algorithm and open source inputs (Sentinel-2 imagery and OSM footprints).</p>
+						</article>
+						<article class="thumb">
+							<a href="https://oballinger.github.io/PICAN-data/" class="image"><img src="images/thumbs/mosaic.jpg" alt="" /></a>
+							<h2>Militant Mosaic</h2>
+							<p>This interactive visualization was created as part of a paper I'm working on. The mosaic is composed of 20,000 images scraped from the insurgents' obituary website.</p>
+						</article>
 
-    <script>
-        const hexGrid = document.getElementById('hexGrid');
-        const hexCount = 10; // 你想要的六边形数量
+						<article class="thumb">
+							<a href="https://face-network.readthedocs.io/en/latest/?badge=latest" class="image"><img src="images/thumbs/network.jpg" alt="" /></a>
+							<h2>Insurgent Photo Networks</h2>
+							<p>I built an open-source Python package that uses deep learning to create a social network graph based on co-appearance in photographs. When applied to a folder of over 20,000 images scraped from a militant group's website, the resulting network closely mirrors the known structure of the insurgent group.</p>
+						</article>
+						<article class="thumb">
+							<a href="projects/abqaiq.html" class="image"><img src="images/thumbs/abqaiq.jpg" alt="" /></a>
+							<h2>Saudi Missile Strike Investigation</h2>
+							<p>In 2019, two Saudi Aramco facilities were hit by cruise missiles leading to the largest 1-day spike in the price of oil ever recorded. The expert consensus is that the attack succeeded because the Saudis were caught off guard. Open-source radar interference from Saudi air defenses may suggest otherwise.</p>
+						</article>
+						<article class="thumb">
+							<a href="projects/elections.html" class="image"><img src="images/thumbs/elections.gif" alt="" /></a>
+							<h2>Fixing Election Maps with Streetlights</h2>
+							<p>Rural counties take up lots of space on election maps despite being sparsely populated, creating significant visual bias. I develop a new approach to correcting this bias using nighttime satellite imagery. This post won the 2020 Mapbox Election Mapping Challenge</p>
+						</article>
+						<article class="thumb">
+							<a href="projects/turkish_elections.html" class="image"><img src="images/thumbs/turkish_elections.jpg" alt="" /></a>
+							<h2>Turkish Elections Data</h2>
+							<p>This tool visualizes 2,975,843 ballot-box level election results in Turkey spanning over 10 years and 20 elections. Data was acquired by scraping the Turkish Election Board's website using Selenium in Python. </p>
+						</article>
+						<article class="thumb">
+							<a href="#" class="image"><img src="images/thumbs/Ilisu.gif" alt="" /></a>
+							<h2>Hasankeyf's Last Vote</h2>
+							<p>Months before being flooded, 55% of a town that is currently underwater voted for the party that built the dam. What follows is a geospatial analysis of this historic event, and the strange political economy that led to it.</p>
+						</article>
+						<article class="thumb">
+							<a href="#" class="image"><img src="images/thumbs/spei.jpg" alt="" /></a>
+							<h2>High Resolution Drought Index</h2>
+							<p>This post outlines a workflow for the calculation of a high-resolution version of the Stardardized Precipitation-Evapotranspiration Index (SPEI). This is accomplished in four steps, utilizing Python, R, and JavaScript.</p>
+						</article>
+						<article class="thumb">
+							<a href="projects/makeshift_refineries/RojavaRefineries.html" class="image"><img src="images/thumbs/rojava.jpg" alt="" /></a>
+							<h2>Syria Makeshift Refinery Detection</h2>
+							<p>This tool uses machine learning and multispectral satellite imagery to identify oil spills resulting from makeshift oil wells and refineries operated in Northern Syria. Users can draw an box over the map to count the number of unique spills detected, as well as an estimate of the total contaminated area.</p>
+						</article>
+						<article class="thumb">
+							<a href="#" class="image"><img src="images/thumbs/voronoi.jpg" alt="" /></a>
+							<h2>Village Voronoi Polygons</h2>
+							<p>Using the latitude and longitude coordinates of human settlements in Pakistan, I create polygons that approximate the shape of villages using a Voronoi tesselation in Python.</p>
+						</article>
+						<article class="thumb">
+							<a href="projects/oil_nlp.html" class="image"><img src="images/thumbs/oil_nlp.jpg" alt="" /></a>
+							<h2>Shareholder Pressure on Oil Companies</h2>
+							<p>How often do oil and gas companies talk about climate change? How do shareholders exert pressure on these issues? This project analyzes the text from 1,656 earnings calls-- over 16,000,000 words in total-- to provide answers.</p>
+						</article>
+					</div>
 
-        for (let i = 0; i < hexCount; i++) {
-            const hex = document.createElement('div');
-            hex.className = 'hex';
-            hexGrid.appendChild(hex);
-            }
-    </script>
-</body>
+				<!-- Footer -->
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+	</body>
 </html>
