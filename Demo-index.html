@@ -33,6 +33,30 @@
 
             text-align: center;
         }
+        .headcontainer{
+            width: 800px;
+            height: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .glass{
+            position: absolute;
+            width: 360px;
+            height: 480px;
+            top: 160px;
+            left: 220px;
+            background: rgba(255, 255, 255, 0.2);
+            color: #eee;
+        }
+        .bg{
+            position: absolute;
+            width: 800px;
+            height: 800px;
+            top: 0;
+            left: 0;
+        }
+
+
         #NavigationBar *{
             background-color: rgba(35, 181, 175, 0.5);
             color: #FFFFFF;
@@ -59,6 +83,9 @@
         .hex:nth-child(odd) {
             margin-left: 0px; /* 为了错开排列 */
         }
+        #welcome{
+            color:aliceblue
+        }
     </style>
 </head>
 
@@ -77,7 +104,9 @@
 
 
 
-    <div id="header">
+    <div id="header" class="headercontainer">
+        <div class="bg"></div>
+        <div class="glass"></div>
         <h1 id="welcome">WELCOME TO MY HOMEPAGE</h1>
     </div>
     <br><br><br><br>
