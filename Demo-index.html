@@ -9,82 +9,56 @@
     <title>HOMEPAGE</title>
 
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            /* background-image: linear-gradient(to right, #8272d1, #69accf, #8272d1); */
-            background-color: rgb(33, 31, 46);
-            opacity: 1;
-            justify-content: center;
-            align-items: center;
+        html, body, .container-fluid, .row, .col {
+            height: 100%;
+            overflow: hidden; /* Prevent scrolling */
         }
-        .row{
-            background-color: rgba(35, 181, 175, 0.5);
-            color: #FFFFFF;
-            border:#5f5353 1px solid;
-            margin: 15px, 0;
-            padding:15px, 0;
-            justify-content: center;
-            align-items: center;
+        body{
+            background-color: rgb(54, 54, 58);
         }
-        .container{
-            margin:20px auto;
+        .sidebar-section {
+            color: white;
+            border: solid #d4d4d4;
         }
-        .col-sm{
 
+
+        #sidebar {
+            transition: all 0.5s ease;
+            height: 100vh;
+            background-color: #3F51B5; 
+            display: hidden;
+        }
+        /* Sidebar's style after collapsed导航栏收缩后的样式 */
+        .collapsed {
+            width: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        #sidebar .nav-link {
+            color: white;
+            /* Hide text when collapsed */
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display:block;
             text-align: center;
         }
-        .headcontainer{
-            width: 800px;
-            height: 800px;
-            margin: 0 auto;
-            position: relative;
-        }
-        .glass{
-            position: absolute;
-            width: 360px;
-            height: 480px;
-            top: 160px;
-            left: 220px;
-            background: rgba(255, 255, 255, 0.2);
-            color: #eee;
-        }
-        .bg{
-            position: absolute;
-            width: 800px;
-            height: 800px;
-            top: 0;
-            left: 0;
-        }
 
+        #main-content {
+            background-color: rgb(71, 80, 99);
+            padding: 1rem;
+        }
+        #Language { height: 8%; }
+        #Selfie { height: 40%; }
+        #Name { height: 12%; }
+        #Navigator { height: 25%; }
+        #Icons { height: 10%; }
+        #Version { height: 5%; }
 
-        #NavigationBar *{
-            background-color: rgba(35, 181, 175, 0.5);
-            color: #FFFFFF;
-            border:#5f5353 1px solid;
-            margin: 15px, 10px;
-            padding:15px, 20px;
-            justify-content: center;
-            align-items: center;
-        }
-        #hexGrid {
-            display: flex;
-            flex-wrap: wrap;
-            width: 40%;
-            margin: 0 auto;
-        }
-        .hex {
-            position: relative;
-            width: 150px;
-            height: 173.205px;
-            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-            background-color: #ddd; /* 六边形的颜色 */
-            margin: 0 1px 29px 1px;
-        }
-        .hex:nth-child(odd) {
-            margin-left: 0px; /* 为了错开排列 */
-        }
-        #welcome{
-            color:aliceblue
+        @media (min-width: 768px) {
+            #main-content {
+                margin-left: 0; /* Expanded width of the sidebar */
+            } 
         }
     </style>
 </head>
@@ -92,46 +66,56 @@
 
 <body>
 
-    <div class="container" id="header">
-        <div class="row" id="NavigationBar">
-            <div class="col-sm Englang" id="Home">Home</div>
-            <div class="col-sm Englang">PROJECT</div>
-            <div class="col-sm Englang">RESUME</div>
-            <!-- <div class="col-sm Chinlang" id="Home">Home</div> -->
-            <!-- <div class="col-sm Chinlang">PROJECT</div> -->
-            <!-- <div class="col-sm Chinlang">RESUME</div> -->
+
+    <div class="container-fluid h-100 p-0">
+        <div class="row no-gutters h-100">
+
+            <!-- Collapsible Sidebar 可折叠侧边栏（左）-->
+            <div id="sidebar" class="col">
+
+                <div class="col-12 d-flex justify-content-center align-items-center sidebar-section" id="Language">A1</div>
+                <div class="col-12 d-flex justify-content-center align-items-center sidebar-section" id="Selfie">A2</div>
+                <div class="col-12 d-flex justify-content-center align-items-center sidebar-section" id="Name">A3</div>
+                <div class="col-12 d-flex justify-content-center align-items-center sidebar-section" id="Navigator">
+                    <a href="#home" class="nav-link active" onclick="showSection('home')">HOME</a>
+                    <a href="#resume" class="nav-link" onclick="showSection('resume')">RESUME</a>
+                    <a href="#portfolio" class="nav-link" onclick="showSection('portfolio')">PORTFOLIO</a>
+                    <a href="#aboutme" class="nav-link" onclick="showSection('about')">ABOUT ME</a>
+                </div>
+                <div class="col-12 d-flex justify-content-center align-items-center sidebar-section" id="Icons">A5</div>
+                <div class="col-12 d-flex justify-content-center align-items-center sidebar-section" id="Version">A6</div>
+            </div>
+      
+            <!-- Main content 右侧主体内容-->
+            <div id="main-content" class="col">
+
+                <!-- Toggle button -->
+                <button class="btn" id="toggleSidebar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <section id="home" class="hidden">
+                    <h1>HOME</h1>                 
+                </section>
+
+                <section id="resume" class="hidden">
+                    <h1>RESUME</h1>
+                </section>
+
+                <section id="portfolio" class="hidden">
+                    <h1>PORTFOLIO</h1>
+                </section>
+
+                <section id="aboutme" class="hidden">
+                    <h1>ABOUT ME</h1>
+                </section>                
+
+
+                <!-- Your content here -->
+                
+            </div>
         </div>
     </div>
-    <br><br><br><br>
-
-
-
-
-    <div id="header" class="headercontainer">
-        <div class="bg"></div>
-        <div class="glass"></div>
-        <h1 id="welcome">WELCOME TO MY HOMEPAGE</h1>
-    </div>
-    <br><br><br><br>
-
-    <div id="hexGrid"></div>
-
-
-
-
-
-
-    <script>
-        const hexGrid = document.getElementById('hexGrid');
-        const hexCount = 10; // 你想要的六边形数量
-
-        for (let i = 0; i < hexCount; i++) {
-            const hex = document.createElement('div');
-            hex.className = 'hex';
-            hexGrid.appendChild(hex);
-            }
-    </script>
-
 
 
     <!-- Introduce jQuery -->
@@ -139,6 +123,30 @@
 
     <!-- Introduce Popper(already in the bundle.js) and Bootstrap JS -->
     <script src="js/bootstrap.bundle.js"></script>
+    <script>
+
+        function showSection(sectionId) {
+            // 首先隐藏所有的section
+            document.querySelectorAll('.section').forEach(function(section) {
+                section.style.display = 'none';
+            });
+
+            // 然后显示选中的section
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // 默认显示首页部分
+            showSection('home');
+        });
+
+        // 侧边栏收缩后，点击导航栏按钮，显示导航栏
+        $(document).ready(function() {
+            $('#toggleSidebar').click(function() {
+                $('#sidebar').toggleClass('collapsed');
+            });
+        });
+      </script>
 
 </body>
 </html>
