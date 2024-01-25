@@ -1,39 +1,127 @@
-body {
-    font-family: Arial, sans-serif;
-    background-image: linear-gradient(to right, #a599e4, #7bc5ec);
-    opacity: 0.5;
-    display: flex;
-    justify-content: center;
+html, body, .container-fluid, .row, .col {
+    height: 100%;
+}
+/* 全视口的设置背景图片set the background image of the whole viewport */
+.container-fluid {
+    position: relative; /* 使伪元素能够相对于此定位 */
+    overflow: hidden; /* 确保伪元素不会超出容器边界 */
+}
+.container-fluid::before {
+    content: ''; /* 伪元素需要内容来显示 */
+    position: absolute; /* 绝对定位 */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../images/D_bgimg2.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    /* 应用滤镜 */
+    filter: brightness(30%) contrast(110%);
+    z-index: -1; /* 确保伪元素位于内容之后 */
 }
 
-header {
-    background-color: #f1f1f1;
+/* 设置侧边栏展开/隐藏 set the sidebar to be collapsed/expanded */
+
+#sidebar {
+    transition: transform 0.5s ease; /* 添加过渡效果 */
+    height: 100vh;
+    /* background-color:rgba(105, 204, 185, 0.5); */
+    background: transparent;
+    backdrop-filter: blur(5vh);
+}
+/* Sidebar's style after collapsed导航栏收缩后的样式 */
+.collapsed {
+    transform: translateX(-100%); /* 当添加 collapsed 类时，sidebar 完全显示 */
+}
+
+
+.sidebar-section {
+    color: white;
+    border: solid rgba(255, 255, 255, 0.2);
+}
+
+#Icons img {
+    width: 1.5rem; /* 调整图标的大小 */
+    margin: 0 1rem; /* 增加左右的间距 */
+}
+
+
+#sidebar .nav-link {
+    color: white;
+    /* Hide text when collapsed */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display:block;
     text-align: center;
-    padding: 10px;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: center;
+#Language { height: 6%; }
+#Selfie { height: 40%; 
+    background-image: url('../images/D_selfie.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 75%;
+}
+#Name { height: 10%; 
+    font-size: 4vh;
+    font-weight: bold;
+}
+#Navigator { height: 30%; 
+    font-size: 2.5vh;
+}
+#Icons { height: 10%; }
+#Icons img {
+    filter: invert(50%); /* 将图标变为白色 */
+    transition: filter 0.15s, box-shadow 0.15s, transform 0.15s; /* 平滑过渡效果 */
+    border-radius: 50%; /* 为光圈效果创建圆形边框 */
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 10px;
+#Icons img:hover {
+    filter: invert(80%); /* 鼠标悬停时轻微改变颜色 */
+    box-shadow: 0 0 50px rgb(255, 255, 255); /* 添加白色光圈阴影效果 */
+    transform: scale(1.3); /* 轻微放大图标 */
 }
 
-nav ul li a {
-    text-decoration: none;
-    color: #333;
+.icon-link {
+    position: relative; /* 使伪元素能够相对于此定位 */
+    display: inline-block; /* 使伪元素能够相对于此定位 */
 }
 
-section {
-    margin: 20px;
+#QRcode {
+    display: none;
+    /* display: block;  */
+    width: 50px;
+    height: 30px;
+    z-index: 1; /* 确保二维码位于内容之前 */
 }
 
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #f1f1f1;
+
+#Version { 
+    height: 4%; 
+    font-size: 1vh;
+}
+
+/* Main content 主体内容 */
+#main-content {
+    background: transparent;
+    backdrop-filter: blur(0.25vh);
+    position: relative;
+}
+#main-content.blurred {
+    backdrop-filter: blur(2vh);
+}
+#main-content.expanded {
+    flex-grow: 1; /* 使元素能够填充可用空间 */
+}
+
+
+
+@media (min-width: 768px) {
+    #main-content {
+        margin-left: 0; 
+}
 }

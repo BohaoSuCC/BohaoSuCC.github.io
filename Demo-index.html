@@ -7,90 +7,69 @@
     <!-- Introduce Bootstrap CSS 引入bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.css">
     <title>HOMEPAGE</title>
+    <link rel="stylesheet" href="css/style.css">
 
-    <style>
-        html, body, .container-fluid, .row, .col {
-            height: 100%;
-            overflow: hidden; /* Prevent scrolling */
-        }
-        body{
-            background-color: rgb(54, 54, 58);
-        }
-        .sidebar-section {
-            color: white;
-            border: solid #d4d4d4;
-        }
-
-
-        #sidebar {
-            transition: all 0.5s ease;
-            height: 100vh;
-            background-color: #3F51B5; 
-            display: hidden;
-        }
-        /* Sidebar's style after collapsed导航栏收缩后的样式 */
-        .collapsed {
-            width: 0;
-            padding: 0;
-            overflow: hidden;
-        }
-        #sidebar .nav-link {
-            color: white;
-            /* Hide text when collapsed */
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            display:block;
-            text-align: center;
-        }
-
-        #main-content {
-            background-color: rgb(71, 80, 99);
-            padding: 1rem;
-        }
-        #Language { height: 8%; }
-        #Selfie { height: 40%; }
-        #Name { height: 12%; }
-        #Navigator { height: 25%; }
-        #Icons { height: 10%; }
-        #Version { height: 5%; }
-
-        @media (min-width: 768px) {
-            #main-content {
-                margin-left: 0; /* Expanded width of the sidebar */
-            } 
-        }
-    </style>
 </head>
 
 
 <body>
 
 
-    <div class="container-fluid h-100 p-0">
+    <div class="container-fluid h-100 p-0" id="pageview">
         <div class="row no-gutters h-100">
 
             <!-- Collapsible Sidebar 可折叠侧边栏（左）-->
-            <div id="sidebar" class="col">
+            <div id="sidebar" class="col-2">
 
-                <div class="col-12 d-flex justify-content-center align-items-center sidebar-section" id="Language">A1</div>
-                <div class="col-12 d-flex justify-content-center align-items-center sidebar-section" id="Selfie">A2</div>
-                <div class="col-12 d-flex justify-content-center align-items-center sidebar-section" id="Name">A3</div>
-                <div class="col-12 d-flex justify-content-center align-items-center sidebar-section" id="Navigator">
-                    <a href="#home" class="nav-link active" onclick="showSection('home')">HOME</a>
-                    <a href="#resume" class="nav-link" onclick="showSection('resume')">RESUME</a>
-                    <a href="#portfolio" class="nav-link" onclick="showSection('portfolio')">PORTFOLIO</a>
-                    <a href="#aboutme" class="nav-link" onclick="showSection('about')">ABOUT ME</a>
+                <div class="col-12 d-flex justify-content-center align-items-center sidebar-section" id="Language">
+                    中/英
+                    <img src="" alt="">
                 </div>
-                <div class="col-12 d-flex justify-content-center align-items-center sidebar-section" id="Icons">A5</div>
-                <div class="col-12 d-flex justify-content-center align-items-center sidebar-section" id="Version">A6</div>
+
+                <div class="col-12 d-flex justify-content-center align-items-center sidebar-section" id="Selfie">A2</div>
+
+                <!-- 姓名NAME -->
+                <div class="col-12 d-flex justify-content-center align-items-center sidebar-section" id="Name">BOHAO SU</div>
+
+                <!-- 导航按钮Navigator buttons -->
+                <div class="col-12 d-flex flex-column justify-content-center align-items-center sidebar-section" id="Navigator">
+                    <a href="#home" class="nav-link active" onclick="showSection('home')" id="nav-link_home">HOME</a>
+                    <a href="#resume" class="nav-link" onclick="showSection('resume')" id="nav-link_resume">RESUME</a>
+                    <a href="#portfolio" class="nav-link" onclick="showSection('portfolio')" id="nav-link_portfolio">PORTFOLIO</a>
+                    <a href="#aboutme" class="nav-link" onclick="showSection('about')" id="nav-link_aboutme">ABOUT ME</a>
+
+                    <img src="images/WechaQRcode.jpg" alt="QRcode" style="width: 90%; height: auto;" id="QRcode">
+                    
+                </div>
+
+                <!-- 社交媒体图标Social media icons -->
+                <div class="col-12 d-flex justify-content-center align-items-center sidebar-section" id="Icons">
+                    <a href="https://github.com/BohaoSuCC" target="_blank">
+                        <img src="images/Icon_github.svg" alt="Github">
+                    </a>
+                    <a href="https://linkedin.com/in/bohaosucc" target="_blank">
+                        <img src="images/Icon_linkedin.svg" alt="LinkedIn">
+                    </a>
+                    <a href="images/WechaQRcode.jpg" target="_blank" id="Icons_Wechat">
+                        <img src="images/Icon_wechat.svg" alt="Wechat">
+                    </a>
+                    <!-- QRcode  -->
+
+                </div>
+
+                <!-- 版权声明 -->
+                <div class="col-12 d-flex justify-content-center align-items-center sidebar-section" id="Version">
+                    @Copyright 2024 Bohao Su
+                </div>
             </div>
       
             <!-- Main content 右侧主体内容-->
             <div id="main-content" class="col">
 
+                
+
                 <!-- Toggle button -->
-                <button class="btn" id="toggleSidebar">
+                <button class="btn" id="toggleSidebar" onclick="SidebarCollapse()">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -125,27 +104,50 @@
     <script src="js/bootstrap.bundle.js"></script>
     <script>
 
-        function showSection(sectionId) {
-            // 首先隐藏所有的section
-            document.querySelectorAll('.section').forEach(function(section) {
-                section.style.display = 'none';
-            });
+ 
+        // 定义侧边栏收缩函数 Define the function of collapsing sidebar
+        // function SidebarCollapse() {
+        //     var sidebar = document.getElementById('sidebar');
+        //         if (sidebar.classList.contains('collapsed')) {
+        //             sidebar.classList.remove('collapsed');
+        //         } else {
+        //             sidebar.classList.add('collapsed');
+        //         }
+        //     }
 
-            // 然后显示选中的section
-            document.getElementById(sectionId).style.display = 'block';
+        function SidebarCollapse() {
+            var sidebar = document.getElementById('sidebar');
+            var mainContent = document.getElementById('main-content');
+            if (sidebar.classList.contains('collapsed')) {
+                sidebar.classList.remove('collapsed');
+                mainContent.classList.remove('expanded'); // 移除主内容区的扩展样式
+            } else {
+                sidebar.classList.add('collapsed');
+                mainContent.classList.add('expanded'); // 添加主内容区的扩展样式
+            }
         }
 
-        document.addEventListener('DOMContentLoaded', function() {
-            // 默认显示首页部分
-            showSection('home');
-        });
 
-        // 侧边栏收缩后，点击导航栏按钮，显示导航栏
-        $(document).ready(function() {
-            $('#toggleSidebar').click(function() {
-                $('#sidebar').toggleClass('collapsed');
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var wechatIcon = document.getElementById('Icons_Wechat');
+            var qrCode = document.getElementById('QRcode');
+
+            wechatIcon.addEventListener('mouseover', function () {
+                qrCode.style.display = 'block';
+                qrCode.style.left = '0';
+                qrCode.style.top = '0';
+                qrCode.style.maxWidth = '50px';
+                qrCode.style.maxHeight = '50px';
+                qrCode.style.width = '50px';
+                qrCode.style.height = '50px';
+            });
+
+            wechatIcon.addEventListener('mouseout', function () {
+                qrCode.style.display = 'none';
             });
         });
+
       </script>
 
 </body>
