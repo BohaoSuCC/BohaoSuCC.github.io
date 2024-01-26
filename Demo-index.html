@@ -26,7 +26,9 @@
                     <img src="" alt="">
                 </div>
 
-                <div class="col-12 d-flex justify-content-center align-items-center sidebar-section" id="Selfie">A2</div>
+                <div class="col-12 d-flex justify-content-center align-items-center sidebar-section" id="Selfie">
+                    <!-- <img src="images/Selfie.jpg" alt="Selfie"> -->
+                </div>
 
                 <!-- 姓名NAME -->
                 <div class="col-12 d-flex justify-content-center align-items-center sidebar-section" id="Name">BOHAO SU</div>
@@ -37,9 +39,6 @@
                     <a href="#resume" class="nav-link" onclick="showSection('resume')" id="nav-link_resume">RESUME</a>
                     <a href="#portfolio" class="nav-link" onclick="showSection('portfolio')" id="nav-link_portfolio">PORTFOLIO</a>
                     <a href="#aboutme" class="nav-link" onclick="showSection('about')" id="nav-link_aboutme">ABOUT ME</a>
-
-                    <img src="images/WechaQRcode.jpg" alt="QRcode" style="width: 90%; height: auto;" id="QRcode">
-                    
                 </div>
 
                 <!-- 社交媒体图标Social media icons -->
@@ -129,24 +128,6 @@
 
 
 
-        document.addEventListener('DOMContentLoaded', function () {
-            var wechatIcon = document.getElementById('Icons_Wechat');
-            var qrCode = document.getElementById('QRcode');
-
-            wechatIcon.addEventListener('mouseover', function () {
-                qrCode.style.display = 'block';
-                qrCode.style.left = '0';
-                qrCode.style.top = '0';
-                qrCode.style.maxWidth = '50px';
-                qrCode.style.maxHeight = '50px';
-                qrCode.style.width = '50px';
-                qrCode.style.height = '50px';
-            });
-
-            wechatIcon.addEventListener('mouseout', function () {
-                qrCode.style.display = 'none';
-            });
-        });
 
       </script>
 

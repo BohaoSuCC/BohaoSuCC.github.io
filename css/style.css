@@ -39,7 +39,7 @@ html, body, .container-fluid, .row, .col {
 
 .sidebar-section {
     color: white;
-    border: solid rgba(255, 255, 255, 0.2);
+
 }
 
 #Icons img {
@@ -58,20 +58,42 @@ html, body, .container-fluid, .row, .col {
     text-align: center;
 }
 
-#Language { height: 6%; }
-#Selfie { height: 40%; 
-    background-image: url('../images/D_selfie.jpg');
+#Language { 
+    height: 6%; 
+}
+
+#Selfie { 
+    height: 40%; 
+    background-image: url('../images/selfie.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center center;
     border-radius: 75%;
+    border: solid rgba(255, 255, 255, 0.2);
 }
-#Name { height: 10%; 
+#Name { 
+    height: 10%; 
     font-size: 4vh;
     font-weight: bold;
+    color:aliceblue;
+    filter: blur(0.5px);
+    opacity: 0.8;
+    animation: animate 1s linear infinite;
 }
-#Navigator { height: 30%; 
+#Navigator { 
+    height: 30%; 
     font-size: 2.5vh;
+    position: relative;
+    color: rgba(220, 220, 255, 0.6);
+}
+.nav-link{
+    filter: invert(20%); /* 将图标变为白色 */
+    transition: filter 0.15s, box-shadow 0.15s, transform 0.15s; /* 平滑过渡效果 */
+}
+.nav-link:hover {
+    filter: invert(0%); /* 鼠标悬停时轻微改变颜色 */
+    transform: scale(1.3); /* 轻微放大图标 */
+
 }
 #Icons { height: 10%; }
 #Icons img {
@@ -91,13 +113,7 @@ html, body, .container-fluid, .row, .col {
     display: inline-block; /* 使伪元素能够相对于此定位 */
 }
 
-#QRcode {
-    display: none;
-    /* display: block;  */
-    width: 50px;
-    height: 30px;
-    z-index: 1; /* 确保二维码位于内容之前 */
-}
+
 
 
 #Version { 
