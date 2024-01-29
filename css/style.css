@@ -48,7 +48,7 @@ html, body, .container-fluid, .row, .col {
 }
 
 
-#sidebar .nav-link {
+#sidebar {
     color: white;
     /* Hide text when collapsed */
     white-space: nowrap;
@@ -89,6 +89,13 @@ html, body, .container-fluid, .row, .col {
 .nav-link{
     filter: invert(20%); /* 将图标变为白色 */
     transition: filter 0.15s, box-shadow 0.15s, transform 0.15s; /* 平滑过渡效果 */
+    color: white;
+    /* Hide text when collapsed */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display:block;
+    text-align: center;
 }
 .nav-link:hover {
     filter: invert(0%); /* 鼠标悬停时轻微改变颜色 */
@@ -134,7 +141,16 @@ html, body, .container-fluid, .row, .col {
     flex-grow: 1; /* 使元素能够填充可用空间 */
 }
 
+.shownhidden {
+    display: none;
+}
 
+.active-section {
+    /* background-color: rgba(255, 255, 255, 0.7) */
+    color: rgba(108, 108, 210, 0.9)
+    
+    /* 根据需要添加其他样式 */
+}
 
 @media (min-width: 768px) {
     #main-content {

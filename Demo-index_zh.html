@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <!-- Prior to mobile devices 移动设备优先 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <!-- Introduce Bootstrap CSS 引入bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.css">
-    <title>HOMEPAGE</title>
+    <title>个人主页</title>
     <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -22,7 +22,8 @@
             <div id="sidebar" class="col-2">
 
                 <div class="col-12 d-flex justify-content-center align-items-center sidebar-section" id="Language">
-                    中/英
+                    <button id="btnChinese" class="btn btn-primary mr-2">中</button>
+                    <button id="btnEnglish" class="btn btn-secondary">EN</button>
                     <img src="" alt="">
                 </div>
 
@@ -31,14 +32,14 @@
                 </div>
 
                 <!-- 姓名NAME -->
-                <div class="col-12 d-flex justify-content-center align-items-center sidebar-section" id="Name">BOHAO SU</div>
+                <div class="col-12 d-flex justify-content-center align-items-center sidebar-section" id="Name">苏博昊</div>
 
                 <!-- 导航按钮Navigator buttons -->
                 <div class="col-12 d-flex flex-column justify-content-center align-items-center sidebar-section" id="Navigator">
-                    <a href="#home" class="nav-link active" onclick="showSection('home')" id="nav-link_home">HOME</a>
-                    <a href="#resume" class="nav-link" onclick="showSection('resume')" id="nav-link_resume">RESUME</a>
-                    <a href="#portfolio" class="nav-link" onclick="showSection('portfolio')" id="nav-link_portfolio">PORTFOLIO</a>
-                    <a href="#aboutme" class="nav-link" onclick="showSection('about')" id="nav-link_aboutme">ABOUT ME</a>
+                    <a href="#home" class="nav-link active" onclick="showSection('home')" id="nav-link_home">主页</a>
+                    <a href="#resume" class="nav-link" onclick="showSection('resume')" id="nav-link_resume">简历</a>
+                    <a href="#portfolio" class="nav-link" onclick="showSection('portfolio')" id="nav-link_portfolio">作品项目</a>
+                    <a href="#aboutme" class="nav-link" onclick="showSection('about')" id="nav-link_aboutme">关于我</a>
                 </div>
 
                 <!-- 社交媒体图标Social media icons -->
