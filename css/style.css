@@ -120,7 +120,7 @@ button#btnEnglish{
 /* 侧边栏第三栏-姓名 sidebar's 3rd section---Name */
 #Name { 
     height: 10%; 
-    font-size: 3vw;
+    font-size: 2vw;
     font-weight: bold;
     color:aliceblue;
     filter: blur(0.5px);

@@ -21,10 +21,10 @@ function SidebarCollapse() {
 
     if (sidebar.classList.contains('collapsed')) {
         sidebar.classList.remove('collapsed');
-        maincontent.classList.remove('expanded'); // 移除主内容区的扩展样式
+        maincontent.classList.remove('expanded');
     } else {
         sidebar.classList.add('collapsed');
-        maincontent.classList.add('expanded'); // 添加主内容区的扩展样式
+        maincontent.classList.add('expanded');
     }
 }
 
