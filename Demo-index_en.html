@@ -5,7 +5,7 @@
     <!-- Prior to mobile devices 移动设备优先 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <!-- Introduce Bootstrap CSS 引入bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
     <title>HOMEPAGE</title>
     <link rel="stylesheet" href="css/style.css">
 
@@ -15,35 +15,47 @@
 <body>
 
 
-    <div class="container-fluid h-100 p-0" id="pageview">
-        <div class="row no-gutters h-100">
+    <div id="wholepageview">
+        <div class="row-layout" id="layout">
 
             <!-- Collapsible Sidebar 可折叠侧边栏（左）-->
-            <div id="sidebar" class="col-2">
+            <div id="sidebar">
 
-                <div class="col-12 d-flex justify-content-center align-items-center sidebar-section" id="Language">
-                    <button id="btnChinese" class="btn btn-primary mr-2">中</button>
-                    <button id="btnEnglish" class="btn btn-secondary">EN</button>
-                    <img src="" alt="">
+                <div class="sidebar-section" id="Language">
+                    <button id="btnChinese" class="Button-Language">中</button>
+                    <button id="btnEnglish" class="Button-Language">EN</button>
                 </div>
 
-                <div class="col-12 d-flex justify-content-center align-items-center sidebar-section" id="Selfie">
+                <!-- 自拍照片Selfie -->
+                <div class="sidebar-section" id="Selfie">
                     <!-- <img src="images/Selfie.jpg" alt="Selfie"> -->
                 </div>
 
                 <!-- 姓名NAME -->
-                <div class="col-12 d-flex justify-content-center align-items-center sidebar-section" id="Name">BOHAO SU</div>
+                <div class="sidebar-section" id="Name">BOHAO SU</div>
 
                 <!-- 导航按钮Navigator buttons -->
-                <div class="col-12 d-flex flex-column justify-content-center align-items-center sidebar-section" id="Navigator">
-                    <a href="#home" class="nav-link" onclick="showSection('home')" id="nav-link_home">HOME</a>
-                    <a href="#resume" class="nav-link" onclick="showSection('resume')" id="nav-link_resume">RESUME</a>
-                    <a href="#portfolio" class="nav-link" onclick="showSection('portfolio')" id="nav-link_portfolio">PORTFOLIO</a>
-                    <a href="#aboutme" class="nav-link" onclick="showSection('aboutme')" id="nav-link_aboutme">ABOUT ME</a>
+                <div class="sidebar-section" id="Navigator">
+                    <div class="Navigator-subpart" id="Navigator_home">
+                        <img src="./images/icon_home.svg" alt="" id="icon_home" class="icons-in-navigator">
+                        <a href="#home" class="nav-link" onclick="showSection('home')" id="nav-link_home">HOME</a>
+                    </div>
+                    <div class="Navigator-subpart" id="Navigator_home">
+                        <img src="./images/icon_resume.svg" alt="" id="icon_resume" class="icons-in-navigator">
+                        <a href="#resume" class="nav-link" onclick="showSection('resume')" id="nav-link_resume">RESUME</a>
+                    </div>
+                    <div class="Navigator-subpart" id="Navigator_home">
+                        <img src="./images/icon_portfolio.svg" alt="" id="icon_portfolio" class="icons-in-navigator">
+                        <a href="#portfolio" class="nav-link" onclick="showSection('portfolio')" id="nav-link_portfolio">PORTFOLIO</a>
+                    </div>
+                    <div class="Navigator-subpart" id="Navigator_home">
+                        <img src="./images/icon_aboutme.svg" alt="" id="icon_aboutme" class="icons-in-navigator">
+                        <a href="#aboutme" class="nav-link" onclick="showSection('aboutme')" id="nav-link_aboutme">ABOUT ME</a>
+                    </div>
                 </div>
 
                 <!-- 社交媒体图标Social media icons -->
-                <div class="col-12 d-flex justify-content-center align-items-center sidebar-section" id="Icons">
+                <div class="sidebar-section" id="Icons">
                     <a href="https://github.com/BohaoSuCC" target="_blank">
                         <img src="images/Icon_github.svg" alt="Github">
                     </a>
@@ -58,38 +70,41 @@
                 </div>
 
                 <!-- 版权声明 -->
-                <div class="col-12 d-flex justify-content-center align-items-center sidebar-section" id="Version">
+                <div class="sidebar-section" id="Version">
                     @Copyright 2024 Bohao Su
                 </div>
             </div>
       
             <!-- Main content 右侧主体内容-->
-            <div id="main-content" class="col">
+            <div id="main-content">
 
                 
 
                 <!-- Toggle button -->
-                <button class="btn" id="toggleSidebar" onclick="SidebarCollapse()">
+                <button class="ButtonToggle" id="toggleSidebar" onclick="SidebarCollapse()">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-
+                <div id="main-container">
+                    <div id="home" class="Main-section shownhidden">
+                        <div>HOME</div>                 
+                    </div>
+    
+                    <div id="resume" class="Main-section shownhidden">
+                        <div>RESUME</div>
+                    </div>
+    
+                    <div id="portfolio" class="Main-section shownhidden">
+                        <div>PORTFOLIO</div>
+                    </div>
+    
+                    <div id="aboutme" class="Main-section shownhidden">
+                        <div>ABOUT ME</div>
+                    </div>  
+                    
+                </div>
                 <!-- Four Sections -->
-                <div id="home" class="Main-section shownhidden">
-                    <div>HOME</div>                 
-                </div>
-
-                <div id="resume" class="Main-section shownhidden">
-                    <div>RESUME</div>
-                </div>
-
-                <div id="portfolio" class="Main-section shownhidden">
-                    <div>PORTFOLIO</div>
-                </div>
-
-                <div id="aboutme" class="Main-section shownhidden">
-                    <div>ABOUT ME</div>
-                </div>                
+                              
 
 
                 <!-- Your content here -->
@@ -104,71 +119,9 @@
 
     <!-- Introduce Popper(already in the bundle.js) and Bootstrap JS -->
     <script src="js/bootstrap.bundle.js"></script>
-    <script>
 
- 
-        // 定义侧边栏收缩函数 Define the function of collapsing sidebar
-        // function SidebarCollapse() {
-        //     var sidebar = document.getElementById('sidebar');
-        //         if (sidebar.classList.contains('collapsed')) {
-        //             sidebar.classList.remove('collapsed');
-        //         } else {
-        //             sidebar.classList.add('collapsed');
-        //         }
-        //     }
-
-        function SidebarCollapse() {
-            var sidebar = document.getElementById('sidebar');
-            var mainContent = document.getElementById('main-content');
-            if (sidebar.classList.contains('collapsed')) {
-                sidebar.classList.remove('collapsed');
-                mainContent.classList.remove('expanded'); // 移除主内容区的扩展样式
-            } else {
-                sidebar.classList.add('collapsed');
-                mainContent.classList.add('expanded'); // 添加主内容区的扩展样式
-            }
-        }
-
-
-
-
-        function showSection(sectionId) {
-            // 隐藏所有部分
-            hideAllSections();
-
-            // 显示指定的部分
-            var section = document.getElementById(sectionId);
-            if (section) {
-                section.classList.remove('shownhidden');
-            }
-
-            // 更新导航链接的激活状态
-            updateNavLinks(sectionId);
-        }
-
-        
-
-        function hideAllSections() {
-            var sections = document.querySelectorAll('.Main-section');
-            sections.forEach(function(section) {
-                section.classList.add('shownhidden');
-            });
-        }
-
-        function updateNavLinks(activeSectionId) {
-            var navLinks = document.querySelectorAll('#Navigator .nav-link');
-            navLinks.forEach(function(link) {
-                if (link.getAttribute('href') === '#' + activeSectionId) {
-                    link.classList.add('active');
-                    link.classList.add('active-section')
-                } else {
-                    link.classList.remove('active');
-                    link.classList.remove('active-section');
-                }
-            });
-        }
-
-      </script>
+    <!-- Introduce my customized JS -->
+    <script src="js/script.js"></script>
 
 </body>
 </html>
