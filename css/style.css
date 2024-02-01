@@ -120,7 +120,7 @@ button#btnEnglish{
 /* 侧边栏第三栏-姓名 sidebar's 3rd section---Name */
 #Name { 
     height: 10%; 
-    font-size: 2vw;
+    font-size: calc((2vh + 3vw) / 2);
     font-weight: bold;
     color:aliceblue;
     filter: blur(0.5px);
@@ -258,16 +258,53 @@ button#btnEnglish{
     padding:0;
     height: 90%;
     width: 90%;
+    border-radius: 5vh;
     justify-content: center;
     align-items: center;
     text-align: center;
     overflow: hidden;
     text-overflow: ellipsis;
+    border:#fff dashed 0.5vh;
+    background-color: rgba(255, 255, 255, 0.2);
+    filter: drop-shadow(0 1vh 1vh rgba(0, 0, 0, 0.1))
 }
 
+.Main-section{
+    /* background-color: rgba(215, 247, 255, 0.5); */
+    position:relative;
+    border-radius: 5vh;
+    display:flex;
+    border:#fff solid 0.5vh;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height:95%;
+    width:95%;
+    color:#fff;
+    filter: drop-shadow(0 1vh 1vh rgba(0, 0, 0, 0.1))
+}
 
 .shownhidden {
     display: none;
+}
+
+
+
+#resume{
+    background-color: rgba(255, 255, 255, 0.5);
+    position:relative;
+    border-radius: 5vh;
+    font-size: calc((1vh + 2vw) / 4);
+    display:flex;
+    border:#fff solid 0.5vh;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height:95%;
+    width:95%;
+    color:#fff;
+    filter: drop-shadow(0 1vh 1vh rgba(0, 0, 0, 0.1))
+
 }
 
 
