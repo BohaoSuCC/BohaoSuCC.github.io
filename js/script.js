@@ -48,6 +48,7 @@ function showSection(sectionId) {
     // 更新导航链接的激活状态
     updateNavLinks(sectionId);
 }
+
 /**
  * 隐藏所有部分
  * hide all sections of content
@@ -58,6 +59,7 @@ function hideAllSections() {
         section.classList.add('shownhidden');
     });
 }
+
 /**
  * 更新导航链接的激活状态
  * update the active status of navigation links

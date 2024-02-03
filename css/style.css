@@ -264,24 +264,24 @@ button#btnEnglish{
     text-align: center;
     overflow: hidden;
     text-overflow: ellipsis;
-    border:#fff dashed 0.5vh;
     background-color: rgba(255, 255, 255, 0.2);
     filter: drop-shadow(0 1vh 1vh rgba(0, 0, 0, 0.1))
 }
 
 .Main-section{
-    /* background-color: rgba(215, 247, 255, 0.5); */
     position:relative;
     border-radius: 5vh;
-    display:flex;
     border:#fff solid 0.5vh;
     text-align: center;
     justify-content: center;
     align-items: center;
+    align-content: center;
+    transition:all 0.3s ease-in-out;
     height:95%;
     width:95%;
     color:#fff;
-    filter: drop-shadow(0 1vh 1vh rgba(0, 0, 0, 0.1))
+    filter: drop-shadow(0 1vh 1vh rgba(0, 0, 0, 0.1));
+    flex-direction: column;
 }
 
 .shownhidden {
@@ -290,12 +290,98 @@ button#btnEnglish{
 
 
 
+#home{
+    background-color: rgba(255, 255, 255, 0.5);
+    position:relative;
+    border-radius: 5vh;
+    font-size: calc((1vh + 2vw) / 4);
+    border:#fff solid 0.2vh;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height:95%;
+    width:95%;
+    color:#fff;
+    filter: drop-shadow(0 1vh 1vh rgba(0, 0, 0, 0.1))
+
+}
+
+/* 简历resume内容 */
 #resume{
     background-color: rgba(255, 255, 255, 0.5);
     position:relative;
     border-radius: 5vh;
     font-size: calc((1vh + 2vw) / 4);
-    display:flex;
+    border:rgba(255, 255, 255, 0.8) solid 0.5vh;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height:95%;
+    width:95%;
+    color:#fff;
+    filter: drop-shadow(0 1vh 1vh rgba(0, 0, 0, 0.1));
+    flex-direction: column;
+}
+
+    #resume-upper{
+        margin:3vh 0;
+        position:relative;
+        height:70%;
+        width:98%;
+        border:#ffffff solid 0.5vh;
+        justify-content: center;
+        align-items: center;
+        text-align: center; 
+        align-content: center;
+        display:flex;
+        flex-direction: row;
+    }
+
+    #resume-lower{
+        margin:2vh 0;
+        position:relative;
+        height:15%;
+        width:95%;
+        border:#fff solid 0.5vh;
+        justify-content: center;
+        align-items: center;
+        text-align: center; 
+        display:inline-block;
+
+    }
+
+        #left-part{
+            margin:0;
+            display:inline-block;
+            flex-direction: column;
+            position:relative;
+            width: 48%;
+            border:#fff solid 0.5vh;
+            height:95%;
+            text-align: justify;
+        }
+
+        #right-part{
+            margin:0;
+            display:inline-block;
+            flex-direction: column;
+            position:relative;
+            width: 48%;
+            border:#fff solid 0.5vh;
+            height:95%;
+        }
+
+
+
+
+
+
+
+#portfolio{
+    background-color: rgba(255, 255, 255, 0.5);
+    position:relative;
+    border-radius: 5vh;
+    font-size: calc((1vh + 2vw) / 4);
     border:#fff solid 0.5vh;
     text-align: center;
     justify-content: center;
@@ -307,6 +393,21 @@ button#btnEnglish{
 
 }
 
+#aboutme{
+    background-color: rgba(255, 255, 255, 0.5);
+    position:relative;
+    border-radius: 5vh;
+    font-size: calc((1vh + 2vw) / 4);
+    border:#fff solid 0.5vh;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height:95%;
+    width:95%;
+    color:#fff;
+    filter: drop-shadow(0 1vh 1vh rgba(0, 0, 0, 0.1))
+
+}
 
 
 /* @media (min-width: 768px) {
