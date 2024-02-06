@@ -29,35 +29,28 @@ function SidebarCollapse() {
 }
 
 
-
 /**
  * 显示指定的部分
  * show the specified section of content
  * @param {*} sectionId 
  */
 function showSection(sectionId) {
-    // 隐藏所有部分
-    hideAllSections();
+    // 隐藏当前活动的板块
+    var currentActiveSection = document.querySelector('.Main-section.active');
+    if (currentActiveSection) {
+        currentActiveSection.classList.add('shownhidden');
+        currentActiveSection.classList.remove('active');
+    }
 
-    // 显示指定的部分
+    // 显示指定的板块
     var section = document.getElementById(sectionId);
     if (section) {
         section.classList.remove('shownhidden');
+        section.classList.add('active');
     }
 
     // 更新导航链接的激活状态
     updateNavLinks(sectionId);
-}
-
-/**
- * 隐藏所有部分
- * hide all sections of content
- */
-function hideAllSections() {
-    var sections = document.querySelectorAll('.Main-section');
-    sections.forEach(function(section) {
-        section.classList.add('shownhidden');
-    });
 }
 
 /**
@@ -70,7 +63,7 @@ function updateNavLinks(activeSectionId) {
     navLinks.forEach(function(link) {
         if (link.getAttribute('href') === '#' + activeSectionId) {
             link.classList.add('active');
-            link.classList.add('active-section')
+            link.classList.add('active-section');
         } else {
             link.classList.remove('active');
             link.classList.remove('active-section');
@@ -79,7 +72,7 @@ function updateNavLinks(activeSectionId) {
     var navIcons = document.querySelectorAll('.icons-in-navigator');
     navIcons.forEach(function(icon) {
         if (icon.nextElementSibling.getAttribute('href') === '#' + activeSectionId) {
-            icon.classList.add('active-section-icon')
+            icon.classList.add('active-section-icon');
         } else {
             icon.classList.remove('active-section-icon');
         }

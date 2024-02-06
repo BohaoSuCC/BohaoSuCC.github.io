@@ -40,15 +40,15 @@
                         <img src="./images/icon_home.svg" alt="" id="icon_home" class="icons-in-navigator">
                         <a href="#home" class="nav-link" onclick="showSection('home')" id="nav-link_home">HOME</a>
                     </div>
-                    <div class="Navigator-subpart" id="Navigator_home">
+                    <div class="Navigator-subpart" id="Navigator_resume">
                         <img src="./images/icon_resume.svg" alt="" id="icon_resume" class="icons-in-navigator">
                         <a href="#resume" class="nav-link" onclick="showSection('resume')" id="nav-link_resume">RESUME</a>
                     </div>
-                    <div class="Navigator-subpart" id="Navigator_home">
+                    <div class="Navigator-subpart" id="Navigator_portfolio">
                         <img src="./images/icon_portfolio.svg" alt="" id="icon_portfolio" class="icons-in-navigator">
                         <a href="#portfolio" class="nav-link" onclick="showSection('portfolio')" id="nav-link_portfolio">PORTFOLIO</a>
                     </div>
-                    <div class="Navigator-subpart" id="Navigator_home">
+                    <div class="Navigator-subpart" id="Navigator_aboutme">
                         <img src="./images/icon_aboutme.svg" alt="" id="icon_aboutme" class="icons-in-navigator">
                         <a href="#aboutme" class="nav-link" onclick="showSection('aboutme')" id="nav-link_aboutme">ABOUT ME</a>
                     </div>
@@ -94,105 +94,159 @@
     
                     <div id="resume" class="Main-section shownhidden">
                         
-                        <div id="resume-upper">
-                            <div id="left-part">
-                                <div id="education">
-                                    <div>
-                                        <div>Education</div>
-                                        <div>
-                                            <div>University College London --- London, United Kingdom</div>
-                                            <div>Master of Science in Urban Spatial Science --- SEP.2023-SEP.2024</div>
-                                            <div>GPA:Distinction(estimated) --- Main Courses:Quantitative Methods, Data Science for Spatial System, Big Data and Spatial Application, Data Visualisation, GIS</div>
-                                            <div>Nanjing Forestry University --- Nanjing, China</div>
-                                            <div>Bachelor of Engineering in Urban and Rural Planning --- SEP.2016-JUN.2020</div>
-                                            <div>GPA:85.9/100(TOP10%) --- Main Courses:Architectural Design, Urban Studies, Urban Sociology and Economics, Master Planning, ArcGIS, Transportation</div>
-                                        </div>
-                                    </div>
-                                </div>    
-                            
-                                <div id="workingexperience">
-                                    <div>
-                                        <div>Working Experience</div>
-                                        <div>
-                                            <div>East China Architectural Design and Research Institute</div>
-                                                <div>Junior Urban Planner --- JAN.2022-MAY.2023</div>
-                                                <div>
-                                                    •	Investigate and collect communities' data and analyze spatially or demographically to help planning decision-making
-                                                </div>
-                                                <div>
-                                                    •	Conceptual master planning on key indicators such as region's land use proportion and urban development intensity, etc.
-                                                </div>
-                                                
-                                                <div>Graduate Urban Planner --- MAR.2021-JAN.2022</div>
-                                                <div>
-                                                    •	Get access to government's database platform and modify parameters by adjustment of regulatory planning projects.
-                                                </div>
-                                            <div>Urban Planning and Design Institute of NJU</div>
-                                                <div>Urban Planner Intern --- JUN.2019-OCT.2019</div>
-                                                <div>
-                                                    •	assisting in community planning projects and adjustment of regulatory planning project
-                                                </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div id="right-part">
-                                <div id="projects">
-                                    <div>
-                                        <div>Projects</div>
-                                        <div>
-                                            <div>Coursework Project (Spatial Data Science) --- DEC.2023</div>
-                                                <div>
-                                                    London Airbnb Listings' Spatial Distribution of Homogeneity and Heterogeneity Based on NLP and UMAP
-                                                </div>
-                                                    <div>
-                                                        Abstract: Using LDA to generalize wordclouds for Airbnb Listing's features across London. Word2Vec model is used to embed listings features into multi-dimensional vectors and visualize them by UMAP. Comparing embedding vectors to London House Price Index and build prediction model by SVM, which helps to manage and promote listings better.
-                                                    </div>
-                                            
-                                            <div>Individual Research (manuscript prepared for submission) --- OCT.2023</div>
-                                                <div>
-                                                    Urban Shrinkage about Spatial Autocorrelation Analysis and GWR model——Case Study on Northeast China
-                                                </div>
-                                                    <div>
-                                                        Abstract: This study try to redefined urban shrinkage and highlighted the vitality of urban agglomeration's planning. By analyzing population's spatio-temporal flow based on transportation network system, this study is expected to be referential for the integration of the structure of urban agglomeration and the development of urban function in the future.
-                                                    </div>
-                                            <div>Research Project (company initiated) --- FEB.2023</div>
-                                                <div>
-                                                    Evaluation Indicators for Social Resilience in Old City Communities
-                                                </div>
-                                                    <div>
-                                                        Abstract: As part of <Chinese National Standard-Resilience Evaluation System for Old City Communities> spearheaded by Inner Mongolia University of Technology.
-                                                    </div>
-                                            <div>Published Paper (2nd author) --- JUN.2020</div>
-                                                <div>
-                                                    Location of the public service facilities in an urban comprehensive park using a multi-hierarchy and multi-constrained configuration model
-                                                </div>
-                                                    <div>
-                                                        Abstract: Building a multi-hierarchy and multi-constrained spatial configuration model for public facilities. As a classical dynamic programming problem, this study could be extended, generalized and implemented as relative reference in terms of urban study's spatial interaction model
-                                                    </div>         
-                                                    
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div id="resume-lower">
-                            <div id="skills">
+                        
+                        <div id="left-part">
+                            <div id="education">
                                 <div>
-                                    <div>SKILLS</div>
+                                    <div class="Text-Title-1">
+                                        <div>Education</div>
+                                    </div>
                                     <div>
-                                        <div>Python</div>
-                                        <div>JavaScript</div>
-                                        <div>HTML</div>
-                                        <div>CSS</div>
-                                        <div>SQL</div>
-                                        <div>R</div>
+                                        <div class="Text-Bold-1">
+                                            <div style="text-align: left;">University College London</div>
+                                        </div>
+                                        <div class="Text-Bold-2">
+                                            <div style="text-align: left;">Master of Science in Urban Spatial Science</div>
+                                            <div style="text-align: right;">SEP.2023-SEP.2024</div>
+                                        </div>
+                                        <div class="Text-Normal-1">
+                                            <div>
+                                                Main Courses: Quantitative Methods, Data Science for Spatial System, Big Data and Spatial Application, Data Visualisation, GIS
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="Text-Bold-1">
+                                            <div style="text-align: left;">Nanjing Forestry University</div>
+                                        </div>
+                                        <div class="Text-Bold-2">
+                                            <div style="text-align: left;">Bachelor of Engineering in Urban and Rural Planning</div>
+                                            <div style="text-align: right;">SEP.2016-JUN.2020</div>
+                                        </div>
+                                        <div class="Text-Normal-1">
+                                            <div>Main Courses: Architectural Design, Urban Studies, Urban Sociology and Economics, Master Planning, ArcGIS, Transportation</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>    
+                        
+                            <div id="workingexperience">
+                                <div>
+                                    <div class="Text-Title-1">
+                                        <div>Working Experience</div>
+                                    </div>
+                                    <div>
+                                        <div class="Text-Bold-1">
+                                            <div>East China Architectural Design and Research Institute</div>
+                                        </div>
+                                            <div class="Text-Bold-2">
+                                                <div style="text-align: left;">Junior Urban Planner</div>
+                                                <div style="text-align: right;">JAN.2022-MAY.2023</div>
+                                            </div>
+                                                <div class="Text-Normal-1">
+                                                    <div>•	Investigate and collect communities' data and analyze spatially or demographically to help planning decision-making.</div>
+                                                </div>
+                                                <div class="Text-Normal-1">
+                                                    <div>•	Conceptual master planning on key indicators such as region's land use proportion and urban development intensity, etc.</div>
+                                                </div>
+                                        
+                                            <div class="Text-Bold-2">
+                                                <div style="text-align: left;">Graduate Urban Planner</div>
+                                                <div style="text-align: right;">MAR.2021-JAN.2022</div>
+                                            </div>
+                                                <div class="Text-Normal-1">
+                                                    <div>•	Get access to government's database platform and modify parameters by adjustment of regulatory planning projects.</div>
+                                                </div>
+                                            <br>
+                                        <div class="Text-Bold-1">
+                                            Urban Planning and Design Institute of NJU
+                                        </div>
+                                            <div class="Text-Bold-2">
+                                                <div style="text-align: left;">Urban Planner Intern</div>
+                                                <div style="text-align: right;">JUN.2019-OCT.2019</div>
+                                            </div>
+                                                <div class="Text-Normal-1">
+                                                    <div>•	Assisting in community planning projects and adjustment of regulatory planning project.</div>
+                                                </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="skills-lower">
+                                <div id="skills">
+                                    <div>
+                                        <div>SKILLS</div>
+                                        <div>
+                                            <div>Python</div>
+                                            <div>JavaScript</div>
+                                            <div>HTML</div>
+                                            <div>CSS</div>
+                                            <div>SQL</div>
+                                            <div>R</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        
+                        <div id="right-part">
+                            <div id="projects">
+                                <div>
+                                    <div class="Text-Title-1">
+                                        <div>Projects</div>
+                                    </div>
+                                    <div>
+                                        <div class="Text-Bold-1">
+                                            <div style="text-align: left;">Coursework Project (Spatial Data Science)</div>
+                                            <div style="text-align: right;"> --- DEC.2023</div>
+                                        </div>
+                                            <div class="Text-Bold-2">
+                                                <div>London Airbnb Listings' Spatial Distribution of Homogeneity and Heterogeneity Based on NLP and UMAP</div>
+                                            </div>
+                                                <div class="Text-Normal-1">
+                                                    <div>Abstract: Using LDA to generalize wordclouds for Airbnb Listing's features across London. Word2Vec model is used to embed listings features into multi-dimensional vectors and visualize them by UMAP. Comparing embedding vectors to London House Price Index and build prediction model by SVM, which helps to manage and promote listings better.</div>
+                                                </div>
+                                        <br>
+                                        <div class="Text-Bold-1">
+                                            <div style="text-align: left;">Individual Research (Manuscript)</div>
+                                            <div style="text-align: right;">--- OCT.2023</div>
+                                        </div>
+                                            <div class="Text-Bold-2">
+                                                <div>Urban Shrinkage about Spatial Autocorrelation Analysis and GWR model——Case Study on Northeast China</div>
+                                            </div>
+                                                <div class="Text-Normal-1">
+                                                    <div>Abstract: This study try to redefined urban shrinkage and highlighted the vitality of urban agglomeration's planning. By analyzing population's spatio-temporal flow based on transportation network system, this study is expected to be referential for the integration of the structure of urban agglomeration and the development of urban function in the future.</div>
+                                                </div>
+                                        <br>
+                                        <div class="Text-Bold-1">
+                                            <div style="text-align: left;">Research Project (company initiated)</div>
+                                            <div style="text-align: right;">--- FEB.2023</div>
+                                        </div>
+                                            <div class="Text-Bold-2">
+                                                <div>Evaluation Indicators for Social Resilience in Old City Communities</div>
+                                            </div>
+                                                <div class="Text-Normal-1">
+                                                    <div>Abstract: As part of 'Chinese National Standard-Resilience Evaluation System for Old City Communities' spearheaded by Inner Mongolia University of Technology.</div>
+                                                </div>
+                                        <br>
+                                        <div class="Text-Bold-1">
+                                            <div style="text-align: left;">Published Paper (2nd author)</div>
+                                            <div style="text-align: right;">--- JUN.2020</div>
+                                        </div>
+                                            <div class="Text-Bold-2">
+                                                <div>Location of the public service facilities in an urban comprehensive park using a multi-hierarchy and multi-constrained configuration model</div>
+                                            </div>
+                                                <div class="Text-Normal-1">
+                                                    <div>Abstract: Building a multi-hierarchy and multi-constrained spatial configuration model for public facilities. As a classical dynamic programming problem, this study could be extended, generalized and implemented as relative reference in terms of urban study's spatial interaction model</div>
+                                                </div>         
+                                                
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        
+
+                        
 
                         
                     </div>
