@@ -278,7 +278,7 @@ button#btnEnglish{
     justify-content: center;
     align-items: center;
     align-content: center;
-    transition: opacity 1s ease, transform 1s ease, visibility 1s ease;
+    transition: opacity 2s ease, transform 2s ease, visibility 2s ease;
     height:95%;
     width:95%;
     color:#fff;
@@ -294,14 +294,14 @@ button#btnEnglish{
     opacity: 1; 
     visibility: visible;
     transform: translateY(0); 
-    transition: opacity 1s ease, transform 1s ease, visibility 1s ease;
+    transition: opacity 2s ease, transform 2s ease, visibility 2s ease;
 }
 
 .shownhidden {
     transform: translateY(-20vh);
     opacity: 0;
     visibility: hidden;
-    transition: opacity 1s ease, transform 1s ease, visibility 1s ease;
+    transition: opacity 2s ease, transform 2s ease, visibility 2s ease;
 }
 
 
@@ -367,19 +367,16 @@ button#btnEnglish{
             flex-direction: column;
             width: 100%;
             /* border:rgba(24, 65, 250, 0.384) solid 0.5vh; */
-            height:50%;
+            height:45%;
         }
 
-        #skills-lower{
-            margin:2vh 0;
-            height:12%;
-            width:100%;
-            border:#fff solid 0.5vh;
-            justify-content: center;
-            align-items: center;
-            text-align: center; 
-            display:inline-block;
-    
+        #skills{
+            margin:0;
+            display:inline-flex;
+            flex-direction: column;
+            width: 100%;
+            /* border:rgba(24, 65, 250, 0.384) solid 0.5vh; */
+            height:20%;
         }
 
         
@@ -417,6 +414,8 @@ button#btnEnglish{
     display: flex;
     justify-content: space-between;
     margin:calc((1vh + 1vw) / 8) 0;
+    text-underline-offset: 0.5vh;
+    flex-direction: column;
 }
 
 .Text-Bold-2{
@@ -424,8 +423,9 @@ button#btnEnglish{
     display: flex;
     font-family: Arial, Helvetica, sans-serif;
     justify-content: space-between;
-    margin:calc((1vh + 1vw) / 12) 0;
+    margin:calc((1vh + 1vw) / 8) 0;
     font-weight:bold;
+    width: 100%;
 }
 
 .Text-Normal-1{
