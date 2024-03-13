@@ -79,3 +79,7 @@ function updateNavLinks(activeSectionId) {
     });
 }
 
+document.getElementById('resumedownload').addEventListener('click', function() {
+    window.open( 'assets/ResumeOfBohaoSu.pdf', '_blank'); 
+  });
+

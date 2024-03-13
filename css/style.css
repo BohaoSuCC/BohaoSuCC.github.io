@@ -60,7 +60,7 @@ body {
     height: 100vh;
     /* background-color:rgba(105, 204, 185, 0.5); */
     background: transparent;
-    /* backdrop-filter: blur(1px); */
+    backdrop-filter: blur(0.25vh); 
     color: white;
     white-space: nowrap;
     overflow: hidden;
@@ -138,7 +138,8 @@ button#btnEnglish {
 #Name {
     height: 11%;
     font-size: calc((2vh + 3vw) / 2);
-    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
     color: aliceblue;
     filter: blur(0.5px);
     opacity: 0.8;
@@ -150,6 +151,8 @@ button#btnEnglish {
     display: grid;
     height: 27%;
     font-size: 2vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
     margin: 2vh 0;
     position: relative;
     flex-direction: column;
@@ -170,6 +173,7 @@ button#btnEnglish {
     justify-content: center;
     text-align: center;
     text-decoration: none;
+    height: 25%;
 }
 
 /* 导航栏子栏文字样式 */
@@ -266,7 +270,7 @@ button#btnEnglish {
 /* 主体内容 Main content */
 #main-content {
     background: transparent;
-    /* backdrop-filter: blur(0.25vh); */
+    backdrop-filter: blur(0.25vh);
     position: relative;
     height: 100%;
     flex: 1;
@@ -371,14 +375,19 @@ button#btnEnglish {
     text-align: center;
     justify-content: space-evenly;
     align-items: space-evenly;
-    height: 95%;
+    height: 98%;
     width: 95%;
     color: rgba(219, 235, 240, 0.9);
     filter: drop-shadow(0 1vh 1vh rgba(0, 0, 0, 0.1));
-    flex-direction: row;
+    flex-direction: column;
 }
 
 
+#Resume-top{
+    height: 97%;
+    flex-direction: row;
+    display: inline-flex;
+}
 
 
 #left-part {
@@ -489,61 +498,61 @@ button#btnEnglish {
     height:3vh;
 }
 #project-1 {
-    height:12vh;
+    height:13vh;
 }
 #project-1-1{
-    height:3vh;
+    height:2vh;
 }
 #project-1-1-1{
     height:2vh;
 }
 #project-1-1-1-1{
-    height:7vh;
+    height:9vh;
 }
 #project-2 {
-    height:18vh;
+    height: 17.5vh;
 }
 #project-2-1{
-    height:3vh;
+    height:2vh;
 }
 #project-2-1-1{
-    height:4vh;
+    height:3.5vh;
 }
 #project-2-1-1-1{
-    height:11vh;
+    height:12vh;
 }
 #project-3 {
-    height:18vh;
+    height:17vh;
 }
 #project-3-1{
-    height:3vh;
+    height:2vh;
 }
 #project-3-1-1{
-    height:4vh;
+    height:3.5vh;
 }
 #project-3-1-1-1{
-    height:11vh;
+    height:12vh;
 }
 #project-4 {
     height:12vh;
 }
 #project-4-1{
-    height:3vh;
+    height:2vh;
 }
 #project-4-1-1{
     height:2vh;
 }
 #project-4-1-1-1{
-    height:6vh;
+    height:8vh;
 }
 #project-5 {
     height:15vh;
 }
 #project-5-1{
-    height:3vh;
+    height:2vh;
 }
 #project-5-1-1{
-    height:4vh;
+    height:3.5vh;
 }
 #project-5-1-1-1{
     height:11vh;
@@ -567,9 +576,10 @@ button#btnEnglish {
 }
 
 .Text-Bold-1 {
-    font-size: calc((4vh + 6vw) / 9);
-    font-weight: bold;
+    font-size: calc((4vh + 6vw) / 8);
+    font-weight: bolder;
     display: flex;
+    font-family: Arial, Helvetica, sans-serif;
     color:rgba(241, 248, 250, 0.9);
     justify-content: space-between;
     margin: calc((1vh + 1vw) / 5) 0;
@@ -603,7 +613,30 @@ button#btnEnglish {
 
 }
 
+#Resume-bottom{
+    height: 3%;
+    flex-direction: row;
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
 
+#resumedownload {
+    background-color: transparent; /* 设置背景色为透明 */
+    border: none; /* 移除边框 */
+    color: rgba(255, 255, 255, 0.8); /* 设置字体颜色 */
+    font-family: cursive; /* 设置字体样式 */
+    font-size: 1vh; /* 设置字体大小 */
+    padding: 1vh; /* 设置内边距 */
+    box-shadow: inset 0 0 10px #afafaf; /* 设置内部阴影 */
+    cursor: pointer; /* 鼠标悬停时显示手形图标 */
+}
+
+#resumedownload:hover {
+    background-color: rgba(230, 230, 230, 0.541); /* 鼠标悬停时的背景色，可根据需要调整 */
+    color: rgba(15, 15, 15, 0.8); /* 鼠标悬停时的字体颜色 */
+}
 
 
 
@@ -616,7 +649,7 @@ button#btnEnglish {
     font-size: calc((1vh + 2vw) / 4);
     /* border: #fff solid 0.5vh; */
     text-align: center;
-    justify-content: center;
+    justify-content: flex-start;
     align-content: space-evenly;
     gap: 1vh 1vw;
     overflow: auto; /*设定滚动条*/
@@ -665,21 +698,40 @@ button#btnEnglish {
 }
 
 #portfolio > div:hover .PortfolioText{
-    opacity: 0; /* 鼠标悬停时使文本完全透明 */
-    transition: opacity 0.5s ease; /* 添加平滑过渡效果 */
+    opacity: 0.8; /* 鼠标悬停时使文本完全透明 */
+    transition: opacity 0.5s ease, transform 0.5s ease, font-size 0.5s ease; /* 添加平滑过渡效果 */
+    transform: translateY(-18vh);
+    font-size: calc((2vh + 4vw) / 6);
+    font-weight: bolder;
+    line-height: 120%;
 }
 
 .PortfolioText {
     position: absolute;
     width: 80%;
-    line-height: 150%;
+    line-height: 200%;
     opacity: 1;
     transition: opacity 0.5s ease; /* 添加平滑过渡效果 */
 }
 
+.PortfolioDetail{
+    display: flex;
+    opacity:0;
+    position: absolute;
+    font-size: calc((1vh + 2vw) / 3);
+}
+
+#portfolio > div:hover .PortfolioDetail{
+    opacity: 0.8; /* 鼠标悬停时使文本完全透明 */
+    transition: opacity 0.5s ease, transform 0.5s ease, font-size 0.5s ease; /* 添加平滑过渡效果 */
+    transform: translateY(18vh);
+    font-weight: normal;
+}
+
+
 
 #Paper {
-    background-image: url(../images/Paper2.jpg);
+    background-image: url(../images/Paper.gif);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
