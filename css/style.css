@@ -1,6 +1,7 @@
 html,
 body {
     height: 100%;
+    width: 100%;
     padding: 0;
     margin: 0;
 
@@ -13,7 +14,12 @@ body {
     overflow: hidden;
     /* 确保伪元素不会超出容器边界 */
     container: fluid;
+    /* 水平垂直居中对齐 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100%;
+    width: 100%;
     padding: 0;
     margin: 0;
 }
@@ -27,14 +33,14 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(24, 23, 23, 1);
+    background-color: rgb(15, 15, 15);
     background-image: url('../images/D_bgimg2.jpg');
     /* background-size: 100% 100%; */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     /* 应用滤镜 */
-    filter: brightness(50%) contrast(110%);
+    filter: brightness(30%) contrast(120%);
     z-index: -1;
     /* 确保伪元素位于内容之后 */
 }
@@ -43,23 +49,27 @@ body {
 #layout {
     display: flex;
     flex-wrap: wrap;
-    background-color: rgba(255, 255, 255, 0.1);
+    /* background-color: rgba(255, 255, 255, 0.05); */
+    border-radius: 5%;
     margin: 0;
-    height: 100%;
+    height: 82%;
+    width: 87%;
 }
 
 
 /* 设置侧边栏展开/隐藏 set the sidebar to be collapsed/expanded */
 
 #sidebar {
-    flex: 0 0 18%;
+    flex: 0 0 18%;  
     /* 使 sidebar 的宽度固定 */
     max-width: 50%;
     transition: transform 0.5s ease;
     /* 添加过渡效果 */
-    height: 100vh;
-    /* background-color:rgba(105, 204, 185, 0.5); */
-    background: transparent;
+    height: 100%;
+    background-color:rgba(0, 0, 0, 0.2);
+    border: solid rgba(255, 255, 255, 0.2);
+    border-radius: 4%;
+    /* background: transparent; */
     backdrop-filter: blur(0.25vh); 
     color: white;
     white-space: nowrap;
@@ -88,14 +98,14 @@ body {
 
 /* 侧边栏第一栏-语言切换 sidebar's 1st section---Language switcher */
 #Language {
-    height: 10%;
+    height: 8%;
 }
 
 button.Button-Language {
     display: inline-block;
     padding: 0.5vh 0.5vw;
-    font-size: 2vh;
-    line-height: 2vh;
+    font-size: 1.5vh;
+    line-height: 1.5vh;
     text-align: center;
     white-space: nowrap;
     vertical-align: middle;
@@ -104,43 +114,38 @@ button.Button-Language {
 
 button#btnChinese {
     color: #fff;
-    background-color: rgba(37, 37, 37, 0.9);
-    border-color: rgba(220, 220, 255, 0.6);
+    background: none;
+    border-color: rgba(250, 250, 250, 0.2);
 }
 
 button#btnEnglish {
     color: #fff;
-    background-color: rgba(37, 37, 37, 0.9);
-    border-color: rgba(220, 220, 255, 0.6);
+    background-color: rgba(139, 139, 139, 0.1);
+    border-color: rgba(250, 250, 250, 0.2);
 }
 
 /* 侧边栏第二栏-个人照片 sidebar's 2nd section---Selfie */
 #Selfie {
-    height: 30%;
+    height: 25%;
     background-image: url('../images/selfie.jpg');
-    background-size: 100% 110%;
+    background-size: 110% 120%;
     background-repeat: no-repeat;
     background-position: center center;
-    vertical-align: top;
-    margin: 5% 15%;
+    vertical-align: center;
+    margin: 10% 20%;
     border-radius: 100%;
     border: solid rgba(255, 255, 255, 0.2);
 }
 
-#Icons img {
-    width: 1.5rem;
-    /* 调整图标的大小 */
-    margin: 0 1rem;
-    /* 增加左右的间距 */
-}
+
 
 /* 侧边栏第三栏-姓名 sidebar's 3rd section---Name */
 #Name {
     height: 11%;
-    font-size: calc((2vh + 3vw) / 2);
+    font-size: calc((4vh + 6vw) / 4);
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bolder;
-    color: aliceblue;
+    color: rgb(232, 251, 255);
     filter: blur(0.5px);
     opacity: 0.8;
     animation: animate 1s linear infinite;
@@ -149,11 +154,11 @@ button#btnEnglish {
 /* 侧边栏第四栏-导航栏 sidebar's 4th section---Navigator */
 #Navigator {
     display: grid;
-    height: 27%;
-    font-size: 2vh;
+    height: 30%;
+    font-size: calc((4vh + 6vw) / 9);
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    margin: 2vh 0;
+    margin: 1vh 0;
     position: relative;
     flex-direction: column;
     vertical-align: middle;
@@ -199,7 +204,7 @@ button#btnEnglish {
     transform: translateY(-0.4vh);
     display: inline-block;
     filter: invert(50%);
-    height: 3vh;
+    height: calc((4vh + 6vw) / 6);
     position: relative;
     margin-right: 0.5vw;
 }
@@ -208,7 +213,7 @@ button#btnEnglish {
 /* 鼠标悬停状态子栏样式 Subpart's Style when mouse hover */
 .Navigator-subpart:hover .icons-in-navigator,
 .Navigator-subpart:hover .nav-link {
-    transform: scale(1.3);
+    transform: scale(1.2);
     /* 放大效果 */
     margin: 0.8vw;
     transition: transform 0.3s ease;
@@ -223,7 +228,7 @@ button#btnEnglish {
 /* 版面切换显示样式 Style when click-switch-active */
 .active-section {
     color: rgba(215, 247, 255, 0.9);
-    font-size: 3vh;
+    font-size: calc((4vh + 6vw) / 7);
     font-weight: bold;
     border-radius: 0.5vh;
     filter: invert(0%);
@@ -231,7 +236,7 @@ button#btnEnglish {
 
 .active-section-icon {
     filter: invert(100%);
-    transform: scale(1.3);
+    transform: scale(1.2);
     /* 轻微放大图标 */
 }
 
@@ -242,13 +247,15 @@ button#btnEnglish {
 }
 
 #Icons img {
-    width: calc((4vh + 6vw) / 5);
+    width: calc((4vh + 6vw) / 6);
     filter: invert(50%);
     /* 将图标变为白色 */
     transition: filter 0.15s, box-shadow 0.15s, transform 0.15s;
     /* 平滑过渡效果 */
     border-radius: 50%;
     /* 为光圈效果创建圆形边框 */
+    margin: 0 0.5vw;
+    /* 增加左右的间距 */
 }
 
 #Icons img:hover {
@@ -298,15 +305,15 @@ button#btnEnglish {
     flex-wrap: wrap;
     margin: 0;
     padding: 0;
-    height: 90%;
+    height: 98%;
     width: 100%;
-    border-radius: 5vh;
+    border-radius: 0 5vh 5vh 0;
     justify-content: center;
     align-items: center;
     text-align: center;
     overflow: hidden;
     text-overflow: ellipsis;
-    /* background-color: rgba(255, 255, 255, 0.1); */
+    background-color: rgba(143, 143, 143, 0.1);
     filter: drop-shadow(0 1vh 1vh rgba(0, 0, 0, 0.1));
     position: relative;
 }
@@ -352,10 +359,10 @@ button#btnEnglish {
 }
 
 #home {
-    background-color: rgba(255, 255, 255, 0.5);
+    /* background-color: rgba(255, 255, 255, 0.5); */
     border-radius: 5vh;
     font-size: calc((1vh + 2vw) / 4);
-    border: #fff solid 0.2vh;
+    /* border: #fff solid 0.2vh; */
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -364,6 +371,32 @@ button#btnEnglish {
     color: #fff;
     filter: drop-shadow(0 1vh 1vh rgba(0, 0, 0, 0.1))
 }
+
+.HomeText1{
+    font-size: 5vh;
+    font-weight: bolder;
+    color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    display: flex;
+    line-height:300%;
+}
+
+.HomeText2{
+    font-size: 2vh;
+    font-weight: bolder;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    display: flex;
+    line-height:150%;
+}
+
+
 
 /* 简历resume内容 */
 #resume {
@@ -408,7 +441,7 @@ button#btnEnglish {
     flex-direction: column;
     width: 100%;
     /* border:rgba(250, 144, 24, 0.384) solid 0.5vh; */
-    height: 35%;
+    height: 32%;
 }
 
 #workingexperience {
@@ -417,7 +450,7 @@ button#btnEnglish {
     flex-direction: column;
     width: 100%;
     /* border:rgba(24, 65, 250, 0.384) solid 0.5vh; */
-    height: 45%;
+    height: 43%;
 }
 
 #skills {
@@ -426,7 +459,7 @@ button#btnEnglish {
     flex-direction: column;
     width: 100%;
     /* border:rgba(24, 65, 250, 0.384) solid 0.5vh; */
-    height: 20%;
+    height: 25%;
 }
 
 
@@ -444,49 +477,49 @@ button#btnEnglish {
 }
 
 #EDU-1 {
-    height: 3vh;
+    height: 2vh;
 }
 #EDU-1-1{
     height: 2vh;
 }
 #EDU-1-1-1{
-    height: 6vh;
+    height: 4vh;
 }
 #EDU-2{
-    height: 3vh;
+    height: 2vh;
 }
 #EDU-2-1{
     height: 2vh;
 }
 #EDU-2-1-1{
-    height: 6vh;
+    height: 4vh;
 }
 #WE-1{
-    height:3vh;
+    height:2vh;
 }
 #WE-1-1{
     height:2vh;
 }
 #WE-1-1-1{
-    height:4vh;
+    height:3vh;
 }
 #WE-1-1-2{
-    height:4vh;
+    height:3vh;
 }
 #WE-1-2{
     height:2vh;
 }
 #WE-1-2-1{
-    height:5vh;
+    height:4vh;
 }
 #WE-2{
-    height:3vh;
+    height:2vh;
 }
 #WE-2-1{
     height:2vh;
 }
 #WE-2-1-1{
-    height:4vh;
+    height:2vh;
 }
 #SKILL1{
     height:3vh;
@@ -497,8 +530,11 @@ button#btnEnglish {
 #SKILL3{
     height:3vh;
 }
+#SKILL4{
+    height:3vh;
+}
 #project-1 {
-    height:13vh;
+    height:12vh;
 }
 #project-1-1{
     height:2vh;
@@ -507,10 +543,10 @@ button#btnEnglish {
     height:2vh;
 }
 #project-1-1-1-1{
-    height:9vh;
+    height:10vh;
 }
 #project-2 {
-    height: 17.5vh;
+    height: 15vh;
 }
 #project-2-1{
     height:2vh;
@@ -522,7 +558,7 @@ button#btnEnglish {
     height:12vh;
 }
 #project-3 {
-    height:17vh;
+    height:15vh;
 }
 #project-3-1{
     height:2vh;
@@ -560,10 +596,10 @@ button#btnEnglish {
 
 /* resume的字体 resume's font size setting */
 .Text-Title-1 {
-    /* font-size: calc((4vh + 6vw) / 7); */
-    font-size: 200%;
+    font-size: calc((4vh + 6vw) / 5);
+    font-size: 150%;
     font-weight: bolder;
-    color: rgba(241, 248, 250, 0.9);
+    color: rgba(255, 254, 232, 0.9);
     text-align: center;
     font-family: 'Segoe UI';
     justify-content: center;
@@ -571,12 +607,12 @@ button#btnEnglish {
     align-content: center;
     display: flex;
     margin: calc((1vh + 1vw) / 6);
-    margin-top: calc((1vh + 1vw) / 2);
+    margin-top: calc((1vh + 1vw) / 5);
     padding: 0;
 }
 
 .Text-Bold-1 {
-    font-size: calc((4vh + 6vw) / 8);
+    font-size: calc((4vh + 6vw) / 10);
     font-weight: bolder;
     display: flex;
     font-family: Arial, Helvetica, sans-serif;
@@ -588,7 +624,7 @@ button#btnEnglish {
 }
 
 .Text-Bold-2 {
-    font-size: calc((4vh + 6vw) / 10);
+    font-size: calc((4vh + 6vw) / 12);
     display: flex;
     color:rgba(241, 248, 250, 0.9);
     font-family: Arial, Helvetica, sans-serif;
@@ -601,7 +637,7 @@ button#btnEnglish {
 }
 
 .Text-Normal-1 {
-    font-size: calc((2vh + 3vw) / 5);
+    font-size: calc((2vh + 3vw) / 7);
     display: flex;
     color: rgba(219, 235, 240, 0.9);
     font-family: cursive;
@@ -625,12 +661,13 @@ button#btnEnglish {
 #resumedownload {
     background-color: transparent; /* 设置背景色为透明 */
     border: none; /* 移除边框 */
-    color: rgba(255, 255, 255, 0.8); /* 设置字体颜色 */
+    color: rgba(255, 243, 130, 0.8); /* 设置字体颜色 */
     font-family: cursive; /* 设置字体样式 */
     font-size: 1vh; /* 设置字体大小 */
     padding: 1vh; /* 设置内边距 */
     box-shadow: inset 0 0 10px #afafaf; /* 设置内部阴影 */
     cursor: pointer; /* 鼠标悬停时显示手形图标 */
+    margin-right: 3vw;
 }
 
 #resumedownload:hover {
@@ -654,7 +691,7 @@ button#btnEnglish {
     gap: 1vh 1vw;
     overflow: auto; /*设定滚动条*/
     align-items: center;
-    height: 95%;
+    height: 100%;
     width: 95%;
     color: #fff;
     filter: drop-shadow(0 1vh 1vh rgba(0, 0, 0, 0.1))
@@ -662,8 +699,8 @@ button#btnEnglish {
 
 #portfolio > div {
     display: flex;
-    width: 18vw;
-    height: 30vh;
+    width: 16vw;
+    height: 25vh;
     /* border:rgb(50, 50, 150) solid 0.5vh; */
     border-radius: calc(1vh + 1vw);
     position: relative; /* 这使得::before能够相对于#DataDive定位 */
@@ -700,8 +737,8 @@ button#btnEnglish {
 #portfolio > div:hover .PortfolioText{
     opacity: 0.8; /* 鼠标悬停时使文本完全透明 */
     transition: opacity 0.5s ease, transform 0.5s ease, font-size 0.5s ease; /* 添加平滑过渡效果 */
-    transform: translateY(-18vh);
-    font-size: calc((2vh + 4vw) / 6);
+    transform: translateY(-15vh);
+    font-size: calc((2vh + 4vw) / 7);
     font-weight: bolder;
     line-height: 120%;
 }
@@ -718,13 +755,13 @@ button#btnEnglish {
     display: flex;
     opacity:0;
     position: absolute;
-    font-size: calc((1vh + 2vw) / 3);
+    font-size: calc((1vh + 2vw) / 4);
 }
 
 #portfolio > div:hover .PortfolioDetail{
     opacity: 0.8; /* 鼠标悬停时使文本完全透明 */
     transition: opacity 0.5s ease, transform 0.5s ease, font-size 0.5s ease; /* 添加平滑过渡效果 */
-    transform: translateY(18vh);
+    transform: translateY(15vh);
     font-weight: normal;
 }
 

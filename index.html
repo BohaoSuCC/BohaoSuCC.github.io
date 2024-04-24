@@ -8,6 +8,7 @@
     <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
     <title>HOMEPAGE</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://cesium.com/downloads/cesiumjs/releases/1.82/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
 
 </head>
 
@@ -48,30 +49,35 @@
                         <img src="./images/icon_portfolio.svg" alt="" id="icon_portfolio" class="icons-in-navigator">
                         <a href="#portfolio" class="nav-link" onclick="showSection('portfolio')" id="nav-link_portfolio">PORTFOLIO</a>
                     </div>
+                    <!--
                     <div class="Navigator-subpart" id="Navigator_aboutme">
                         <img src="./images/icon_aboutme.svg" alt="" id="icon_aboutme" class="icons-in-navigator">
                         <a href="#aboutme" class="nav-link" onclick="showSection('aboutme')" id="nav-link_aboutme">ABOUT ME</a>
                     </div>
+                    -->
                 </div>
 
                 <!-- 社交媒体图标Social media icons -->
                 <div class="sidebar-section" id="Icons">
-                    <a href="https://github.com/BohaoSuCC" target="_blank">
+                    <a href="https://github.com/BohaoSuCC" target="_blank" rel="noopener">
                         <img src="images/Icon_github.svg" alt="Github">
                     </a>
-                    <a href="https://linkedin.com/in/bohaosucc" target="_blank">
+                    <a href="https://linkedin.com/in/bohaosucc" target="_blank" rel="noopener">
                         <img src="images/Icon_linkedin.svg" alt="LinkedIn">
                     </a>
-                    <a href="images/WechaQRcode.jpg" target="_blank" id="Icons_Wechat">
+                    <a href="images/WechaQRcode.jpg" target="_blank" id="Icons_Wechat" rel="noopener">
                         <img src="images/Icon_wechat.svg" alt="Wechat">
-                    </a>    
+                    </a>
+                    <a href="images/WhatsApp.jpg" target="_blank" id="Icons_WhatsApp" rel="noopener">
+                        <img src="images/whatsapp.svg" alt="WhatsApp">
+                    </a>  
                     <!-- QRcode  -->
 
                 </div>
 
                 <!-- 版权声明Version Copyright -->
                 <div class="sidebar-section" id="Version">
-                    @Copyright 2024 Bohao Su
+                    @2024 Allright Reserved
                 </div>
             </div>
       
@@ -81,7 +87,7 @@
                 
 
                 <!-- 侧边栏伸缩按钮Toggle button -->
-                <button class="ButtonToggle" id="toggleSidebar" onclick="SidebarCollapse()">
+                <button class="ButtonToggle" id="toggleSidebar" onclick="SidebarCollapse()" aria-label="Toggle sidebar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -89,12 +95,28 @@
 
                 <div id="main-container">
                     <div id="home" class="Main-section">
-                        <div>WELCOME TO MY HOMEPAGE</div>
-                        <div>HOME</div>                 
+                        <!--<div class="HomeText1">AI WELCOME ALL</div>
+                        <div class="HomeText1">I'L ALLOW ME ACE</div>
+                        <div class="HomeText1">'TO THINE OWN SELF BE TRUE'</div>
+                        -->
+                        <div class="HomeText2">I am Bohao Su from Nanjing, Jiangsu, China. </div>
+                        <br><br>
+                        <div class="HomeText2">Currently studying at University College London, Master of Science in Urban Spatial Science.</div>
+                        <br><br>
+                        <div class="HomeText2">My research interests include Urban Planning, Data Science, Machine Learning and Complexity Theory</div>
+                        <br><br>
+
+                        <br><br>
+                        <div class="HomeText2">If you want to explore more about my coding repositories, exmples, and notebooks, feel free to visit my GitHub page <a href="https://github.com/BohaoSuCC" target="_blank" rel="noopener">HERE</a>.</div>
+                        <br><br>
+                        <div class="HomeText2">I am open to exciting opportunities, work, collaborations, and more! Don't hesitate to get in touch.</div>
                     </div>
     
                     <div id="resume" class="Main-section shownhidden">
-                        
+                        <div id="Resume-bottom">
+                            <button id="resumedownload">RESUME DOWNLOAD</button>
+                        </div>
+
                         <div id="Resume-top">
                             <div id="left-part">
                                 <div id="education">
@@ -188,6 +210,11 @@
                                         <div class="Text-Bold-2" ID="SKILL3">
                                             <div style="text-align: left;">Deep Learning: NLP(LLMs), Recommendation Prediction System(GNNs), Decision Reasoning</div>
                                         </div>
+
+                                        <div class="Text-Bold-2" ID="SKILL4">
+                                            <div style="text-align: left;">Planning & Designing: Modelling(AutoCAD & SketchUp), Rendering(Lumion & V-Ray), Visual Editing(Photoshop & Premiere)</div>
+                                        </div>
+
                                     </div>
                                 </div>
 
@@ -261,9 +288,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div id="Resume-bottom">
-                            <button id="resumedownload">RESUME DOWNLOAD</button>
-                        </div>
+                        
                         
 
                         
@@ -272,9 +297,6 @@
                     <div id="portfolio" class="Main-section shownhidden">
                         <!-- <div id="DOTA2">
                             <div class="PortfolioText">MOBA GAME BAN/PICK STRATEGY AI SIMULATION</div>
-                        </div>
-                        <div id="GEE">
-                            <div class="PortfolioText">GOOGLE EARTH ENGINE PROJECT</div>
                         </div> -->
                         
                         <div id="DataDive" style="cursor: pointer" onclick="window.open('https:\/\/github.com/BohaoSuCC/2024CUSPLondonDataDive', '_blank')">
@@ -300,6 +322,10 @@
                         <div id="Paper" style="cursor: pointer;" onclick="window.open('https:\/\/www-sciencedirect-com.libproxy.ucl.ac.uk/science/article/pii/S2226585619302833','_blank')">
                             <div class="PortfolioText">PUBLIC FACILITY CONFIGURATION IN PARKS</div>
                             <div class="PortfolioDetail">KEY WORDS: Facilities Configuration, NP-hard, Multi-hierarchy and multi-constrained</div>
+                        </div>
+                        <div id="GEE" style="cursor: pointer;" onclick="window.open('https:\/\/bohaosucc.github.io/CASA0025GEE_Project_OVO/','_blank')">
+                            <div class="PortfolioText">DIM THE LIGHT FOR BIRD MIGRATION</div>
+                            <div class="PortfolioDetail">KEY WORDS: Light Pollution Based on Built-up, Robust Linear Regression, Big Data, Building Stock, CAPLD</div>
                         </div>
 
                         
@@ -331,6 +357,13 @@
 
     <!-- Introduce my customized JS -->
     <script src="js/script.js"></script>
+
+
+    <script src="https://cesium.com/downloads/cesiumjs/releases/1.82/Build/Cesium/Cesium.js"></script>
+
+    <script>
+        // CesiumJS的初始化代码将放在这里
+    </script>
 
 </body>
 </html>
