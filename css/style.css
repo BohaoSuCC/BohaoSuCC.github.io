@@ -52,7 +52,7 @@ body {
     /* background-color: rgba(255, 255, 255, 0.05); */
     border-radius: 5%;
     margin: 0;
-    height: 82%;
+    height: 80%;
     width: 87%;
 }
 
@@ -70,7 +70,8 @@ body {
     border: solid rgba(255, 255, 255, 0.2);
     border-radius: 4%;
     /* background: transparent; */
-    backdrop-filter: blur(0.25vh); 
+    backdrop-filter: blur(0.25vh);
+    -webkit-backdrop-filter: blur(0.25vh); 
     color: white;
     white-space: nowrap;
     overflow: hidden;
@@ -132,7 +133,7 @@ button#btnEnglish {
     background-repeat: no-repeat;
     background-position: center center;
     vertical-align: center;
-    margin: 10% 20%;
+    margin: 5% 20%;
     border-radius: 100%;
     border: solid rgba(255, 255, 255, 0.2);
 }
@@ -155,7 +156,7 @@ button#btnEnglish {
 #Navigator {
     display: grid;
     height: 30%;
-    font-size: calc((4vh + 6vw) / 9);
+    font-size: calc((4vh + 6vw) / 8);
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     margin: 1vh 0;
@@ -243,7 +244,7 @@ button#btnEnglish {
 
 /* 侧边栏第五栏-icon图标栏 sidebar's 5th Icon-bar for link url */
 #Icons {
-    height: 8%;
+    height: 10%;
 }
 
 #Icons img {
@@ -278,6 +279,7 @@ button#btnEnglish {
 #main-content {
     background: transparent;
     backdrop-filter: blur(0.25vh);
+    -webkit-backdrop-filter: blur(0.25vh); /* 为旧版 Safari 和 iOS Safari 添加支持 */
     position: relative;
     height: 100%;
     flex: 1;
@@ -291,6 +293,9 @@ button#btnEnglish {
 
 #main-content.blurred {
     backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(0.25vh);  /* 为旧版 Safari 和 iOS Safari 添加支持 */
+
+
 }
 
 #main-content.expanded {
@@ -373,9 +378,9 @@ button#btnEnglish {
 }
 
 .HomeText1{
-    font-size: 5vh;
+    font-size: 4vh;
     font-weight: bolder;
-    color: #fff;
+    color: #dfdfdf;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     justify-content: center;
     align-items: center;
@@ -387,6 +392,16 @@ button#btnEnglish {
 .HomeText2{
     font-size: 2vh;
     font-weight: bolder;
+    color: #dfdfdf;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    display: flex;
+    line-height:150%;
+}
+.HomeText3{
+    font-size: 1.5vh;
     color: #fff;
     font-family: Arial, Helvetica, sans-serif;
     justify-content: center;
@@ -395,6 +410,24 @@ button#btnEnglish {
     display: flex;
     line-height:150%;
 }
+
+.ImageGallery {
+    display: flex;
+    justify-content: space-around; /* 根据需要调整对齐方式 */
+    align-items: center;
+}
+
+.HomeImage{
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    opacity: 0.7;
+}
+
+
 
 
 
