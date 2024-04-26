@@ -34,7 +34,7 @@ body {
     right: 0;
     bottom: 0;
     background-color: rgb(15, 15, 15);
-    background-image: url('../images/D_bgimg2.jpg');
+    background-image: url('images/D_bgimg2.jpg');
     /* background-size: 100% 100%; */
     background-size: cover;
     background-repeat: no-repeat;
@@ -128,7 +128,7 @@ button#btnEnglish {
 /* 侧边栏第二栏-个人照片 sidebar's 2nd section---Selfie */
 #Selfie {
     height: 28%;
-    background-image: url('../images/selfie.jpg');
+    background-image: url('images/selfie.jpg');
     background-size: 110% 120%;
     background-repeat: no-repeat;
     background-position: center center;
@@ -801,7 +801,7 @@ button#btnEnglish {
 
 
 #Paper {
-    background-image: url(../images/Paper.gif);
+    background-image: url(images/Paper.gif);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -809,7 +809,7 @@ button#btnEnglish {
 }
 
 #UrbanDesign{
-    background-image: url(../images/UrbanDesign.gif);
+    background-image: url(images/UrbanDesign.gif);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -818,7 +818,7 @@ button#btnEnglish {
 
 #DataDive {
     position: relative; /* 这使得::before能够相对于#DataDive定位 */
-    background-image: url(../images/DataDive.gif);
+    background-image: url(images/DataDive.gif);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -826,7 +826,7 @@ button#btnEnglish {
 
 
 #NLP{
-    background-image: url(../images/FSDS.gif);
+    background-image: url(images/FSDS.gif);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -834,7 +834,7 @@ button#btnEnglish {
 }
 
 #Vancouver{
-    background-image: url(../images/Vancouver.gif);
+    background-image: url(images/Vancouver.gif);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -842,21 +842,21 @@ button#btnEnglish {
 }
 
 #Urban-Shrinkage{
-    background-image: url(../images/UrbanShrinkage.gif);
+    background-image: url(images/UrbanShrinkage.gif);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
 }
 
 #GEE{
-    background-image: url(../images/GEE.gif);
+    background-image: url(images/GEE.gif);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
 }
 
 #DOTA2{
-    background-image: url(../images/DOTA2.jpg);
+    background-image: url(images/DOTA2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
