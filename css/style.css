@@ -339,7 +339,7 @@ button#btnEnglish {
     flex-direction: column;
     opacity: 0;
     transform: translateY(-20vh);
-    visibility: hidden;
+    visibility: visible;
 }
 
 .Main-section.active {
