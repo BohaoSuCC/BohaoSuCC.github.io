@@ -127,7 +127,7 @@ button#btnEnglish {
 
 /* 侧边栏第二栏-个人照片 sidebar's 2nd section---Selfie */
 #Selfie {
-    height: 25%;
+    height: 28%;
     background-image: url('../images/selfie.jpg');
     background-size: 110% 120%;
     background-repeat: no-repeat;
