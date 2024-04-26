@@ -1,3 +1,11 @@
+// 默认显示HOME版块
+document.addEventListener('DOMContentLoaded', function() {
+    showSection('home'); // 确保网页加载时默认显示 HOME 版块
+});
+
+
+
+
 // 定义侧边栏收缩函数 Define the function of collapsing sidebar
 // function SidebarCollapse() {
 //     var sidebar = document.getElementById('sidebar');
