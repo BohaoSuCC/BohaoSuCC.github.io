@@ -374,7 +374,8 @@ button#btnEnglish {
     height: 95%;
     width: 95%;
     color: #fff;
-    filter: drop-shadow(0 1vh 1vh rgba(0, 0, 0, 0.1))
+    filter: drop-shadow(0 1vh 1vh rgba(0, 0, 0, 0.1));
+    visibility: visible;
 }
 
 .HomeText1{
